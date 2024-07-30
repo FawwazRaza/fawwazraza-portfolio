@@ -44,10 +44,10 @@ function App() {
           <ScrollToTopOnRouteChange />
           <Routes>
             <Route path="/" element={<Layout />} />
-            <Route path="/about" element={<About />} />
+            <Route path="/*about" element={<About />} />
             <Route path="/projectlist" element={<ArchiveProjects />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/*" element={<NotFound />} />
+            <Route path="/" element={<NotFound />} />
           </Routes>
         </div>
       </Router>
