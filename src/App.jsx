@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useLocation,
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route,
+//   useLocation,
+// } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Preloader from "../src/components/Pre";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
