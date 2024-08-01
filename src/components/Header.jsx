@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, Events, scrollSpy } from "react-scroll";
 import { CgMenuRight } from "react-icons/cg";
 import { UserData } from "../data/UserData";
-import logo from "../Assets/images/logor.png";
+import logo from "../Assets/Fawwaz1.gif";
 
 const Header = () => {
   const [isScrolling, setisScrolling] = useState(false);
@@ -61,7 +61,7 @@ const Header = () => {
               className={
                 activeSection === "Home-section"
                   ? "active"
-                  : "text-white hover:text-gray-900"
+                  : "text-black hover:text-green-500 hover:text-xl hover:font-bold"
               }
             >
               Home
@@ -79,9 +79,11 @@ const Header = () => {
               className={
                 activeSection === "About-section"
                   ? "active"
-                  : "text-white hover:text-gray-900"
+                  : "text-black hover:text-blue-500 hover:text-xl hover:font-bold"
+                  // : "text-black  "
               }
             >
+              
               About
             </p>
           </Link>
@@ -97,7 +99,7 @@ const Header = () => {
               className={
                 activeSection === "Project-section"
                   ? "active"
-                  : "text-white hover:text-gray-900"
+                  : "text-black hover:text-yellow-400 hover:text-xl hover:font-bold"
               }
             >
               Projects
@@ -115,7 +117,8 @@ const Header = () => {
               className={
                 activeSection === "Contact-section"
                   ? "active"
-                  : "text-white hover:text-gray-900"
+                  : "text-black hover:text-red-500 hover:text-xl hover:font-bold"
+                  // : "text-white  "
               }
             >
               Contact
@@ -137,7 +140,7 @@ const Header = () => {
         {" "}
         {/* Show on small screens */}
         <button
-          className="mr-5 block hover:text-gray-900 focus:outline-none"
+          className="mr-5 block   focus:outline-none"
           onClick={toggleMobileMenu}
         >
           <CgMenuRight size={32} />
@@ -161,7 +164,7 @@ const Header = () => {
                 className={
                   activeSection === "Home-section"
                     ? "active"
-                    : "text-black hover:text-gray-900"
+                    : "text-green-500 text-xl font-bold"
                 }
                 onClick={toggleMobileMenu}
               >
@@ -180,7 +183,7 @@ const Header = () => {
                 className={
                   activeSection === "About-section"
                     ? "active"
-                    : "text-black hover:text-gray-900"
+                    : "text-blue-500 text-xl font-bold "
                 }
                 onClick={toggleMobileMenu}
               >
@@ -199,7 +202,7 @@ const Header = () => {
                 className={
                   activeSection === "Project-section"
                     ? "active"
-                    : "text-black hover:text-gray-900"
+                    : "text-yellow-400 text-xl font-bold "
                 }
                 onClick={toggleMobileMenu}
               >
@@ -218,7 +221,7 @@ const Header = () => {
                 className={
                   activeSection === "Contact-section"
                     ? "active"
-                    : "text-black hover:text-gray-900"
+                    : "text-red-500 text-xl font-bold "
                 }
                 onClick={toggleMobileMenu}
               >
@@ -230,7 +233,7 @@ const Header = () => {
                 onClick={() => {
                   window.open(resumeUrl);
                 }}
-                className="button-UI w-[120px] rounded-lg px-4 py-1.5 font-bold tracking-wider text-gray-900 shadow-xl hover:text-white"
+                className="button-UI w-[120px] rounded-lg px-4 py-1.5 font-bold tracking-wider text-gray-900 shadow-xl "
               >
                 Resume
               </button>

@@ -1,17 +1,18 @@
+
 export const UserData = {
-  name: "Rahul Vijay",
-  about : "I'm a front end developer that learned everything on my own. I specialize in creating dynamic, accessible websites that work on any device. Furthermore, I regularly create creative solutions that improve user experiences. I am proficient in React.js, Redux, JavaScript, HTML5, and CSS. I guarantee efficient code management and communication thanks to my knowledge with Git version control. Likewise, I'm also skilled at developing apps using mini program studio frameworks and exceeding client expectations with my high-caliber solutions.",
-  resumeUrl : "https://drive.google.com/file/d/1LSVLVmJA_3fhWtZPc_d_pHnkXhL4s-Oc/view",
-  FooterLink : "https://www.linkedin.com/in/rahulvijay81/",
+  name: "Fawwaz Raza",
+  about:"I'm Muhammad Fawwaz, a Computer Science student at FAST NUCES Lahore, passionate about software development, web technologies, and AI. As a Dean's Honours List awardee, I strive for excellence in both academics and practical applications of technology. My experience includes an internship at Adaxiom, where I developed a dynamic E-Commerce website, and several personal projects showcasing my technical skills. These range from a website aggregator (GariGator) to a food ordering platform (Magnum Opsem), demonstrating my proficiency in various programming languages and frameworks. I'm skilled in C/C++, JavaScript, Python, React.js, and ASP.Net, among others. I'm comfortable with SQL databases and tools like VS Code and Visual Studio. Beyond coding, I have a keen interest in graphic design, adding a creative dimension to my technical abilities. Currently, I'm focusing on advanced AI, machine learning, and data science concepts. I'm eager to collaborate on innovative projects and contribute to open-source initiatives.",
+  resumeUrl: "https://drive.google.com/file/d/1rK7I1aLsQN-AmhH9zdQdhWsGN2ju-L3r/view?usp=sharing",
+  FooterLink: "www.linkedin.com/in/fawwazraza",
   socialMedia: [
     {
       socialMediaName: "github",
-      url: "https://github.com/rahulvijay81",
+      url: "https://github.com/FawwazRaza",
       icon: "AiFillGithub",
     },
     {
       socialMediaName: "linkedin",
-      url: "https://www.linkedin.com/in/rahulvijay81/",
+      url: "www.linkedin.com/in/fawwazraza",
       icon: "FaLinkedinIn",
     },
     {
@@ -20,21 +21,26 @@ export const UserData = {
       icon: "AiOutlineTwitter",
     },
     {
-      socialMediaName: "instagram",
-      url: "https://instagram.com/rahulvijay81",
-      icon: "AiFillInstagram",
+      socialMediaName: "datacamp",
+      url: "https://www.datacamp.com/portfolio/fawwaz-rz",
+      icon: "AiFillCode",
+    },
+    {
+      socialMediaName: "discord",
+      url: "https://discord.com/invite/u4UbYmZG",
+      icon: "FaDiscord",
     },
   ],
   typewriterOptions: {
     strings: [
-      "Front End Developer",
+      "Software Developer",
+      "Web Developer",
+      "AI and ML Enthusiast",
       "React Js Developer",
-      "React Native Developer",
-      "UI Developer",
-      "Javascript Developer",
+      "Programmer",
     ],
     autoStart: true,
     loop: true,
-    deleteSpeed: 30,
+    deleteSpeed: 20,
   },
 };

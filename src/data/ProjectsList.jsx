@@ -15,6 +15,7 @@ export const ProjectsList = {
         "GitHub",
         "Figma",
       ],
+      githubUrl: "https://github.com/FawwazRaza?tab=repositories",
     },
     {
       name: "Zymsi - Gym Membership Platform",
@@ -30,24 +31,28 @@ export const ProjectsList = {
         "GitHub",
         "Figma",
       ],
+      githubUrl: "https://github.com/FawwazRaza?tab=repositories",
     },
     {
       name: "Personal Portfolio",
       description:
         "My portfolio is a website built with React.js and Tailwind CSS, utilizing React Router v6 to enable easy access to multiple pages. It was designed and created entirely by myself, showcasing my skills and projects. The website is responsive and visually appealing, providing a user-friendly experience.",
       technologies: ["React JS", "Tailwind CSS", "Git", "GitHub", "Figma"],
+      githubUrl: "https://github.com/FawwazRaza?tab=repositories",
     },
     {
       name: "Dashboard Panel",
       description:
         "User Admin Dashboard created with React js, Material UI, Nivo Charts, Formik, Yup, FullCalendar, and Data Grid to build this entire application. This application consists of Light and Dark Mode, four different Charts, three different Data Table Pages, FAQ Page, Form Page, and Calendar Integration.",
       technologies: ["React JS", "Material UI"],
+      githubUrl: "https://github.com/FawwazRaza?tab=repositories",
     },
     {
       name: "Grid Line Builders",
       description:
         "Grid line builders is a static webpage built with HTML, CSS, and JavaScript. Users can see images of their work and contact information that helps to connect the home builders through a webpage. webpage builds responsive to multiple sizes of devices.",
       technologies: ["HTML", "CSS", "JavaScript"],
+      githubUrl: "https://github.com/FawwazRaza?tab=repositories",
     },
     {
       name: "Netflix-Clone",
@@ -62,6 +67,7 @@ export const ProjectsList = {
         "GitHub",
         "Figma",
       ],
+      githubUrl: "https://github.com/FawwazRaza?tab=repositories",
     },
     {
       name: "Olx-Clone",
@@ -77,6 +83,7 @@ export const ProjectsList = {
         "GitHub",
         "Figma",
       ],
+      githubUrl: "https://github.com/FawwazRaza?tab=repositories",
     },
   ],
 };

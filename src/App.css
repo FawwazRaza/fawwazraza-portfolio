@@ -9,13 +9,10 @@ body {
   font-family: "Raleway", serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #c850c0;
-  background-image: linear-gradient(
-    43deg,
-    #4158d0 0%,
-    #c850c0 46%,
-    #ffcc70 100%
-  );
+  background-color: #ffffff;
+  background-image: linear-gradient(45deg, #edf2f4); /* Use any gradient from above */
+
+  
 }
 html {
   scroll-behavior: smooth;
@@ -35,7 +32,7 @@ html {
   width: 100%;
   height: 100%;
   z-index: 999999;
-  background-color: #c850c0;
+  background-color: #ffffff;
   background-image: url(../src/Assets/bars.svg);
   background-repeat: no-repeat;
   background-position: center;

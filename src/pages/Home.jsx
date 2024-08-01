@@ -5,9 +5,10 @@ import {
   AiFillGithub,
   AiOutlineTwitter,
   AiFillInstagram,
+  AiFillCode,
 } from "react-icons/ai";
-import { FaLinkedinIn } from "react-icons/fa";
-import imagedeveloper from "../Assets/images/imagedeveloper.png";
+import { FaLinkedinIn, FaDiscord } from "react-icons/fa";
+import imagedeveloper from "../Assets/images/person2.jpg";
 
 function Home() {
   const socialMedia = UserData.socialMedia;
@@ -16,7 +17,16 @@ function Home() {
     AiFillGithub: AiFillGithub,
     FaLinkedinIn: FaLinkedinIn,
     AiOutlineTwitter: AiOutlineTwitter,
-    AiFillInstagram: AiFillInstagram,
+    AiFillCode: AiFillCode,
+    FaDiscord: FaDiscord,
+  };
+
+  const socialMediaColors = {
+    github: "text-gray-800",
+    linkedin: "text-blue-600",
+    twitter: "text-blue-400",
+    datacamp: "text-green-500",
+    discord: "text-indigo-600",
   };
 
   return (
@@ -27,7 +37,7 @@ function Home() {
             Hello <span className="wave">👋</span>
           </h2>
           <h2 className="pt-2 text-2xl font-semibold leading-tight text-gray-900">
-            Im {UserData.name}
+            I'm {UserData.name}
           </h2>
           <TypewriterText />
 
@@ -36,23 +46,43 @@ function Home() {
               const IconComponent = socialMediaIcons[data.icon];
               return (
                 <button
-                  className="flex items-center justify-center rounded-lg border-none bg-transparent hover:bg-white hover:bg-opacity-20 hover:opacity-80 hover:shadow-lg lg:h-12 lg:w-24"
+                  className={`flex items-center justify-center rounded-lg border-none bg-transparent hover:bg-white hover:bg-opacity-20 hover:opacity-80 hover:shadow-lg lg:h-12 lg:w-24 ${
+                    socialMediaColors[data.socialMediaName]
+                  }`}
                   key={index}
                   onClick={() => window.open(data.url)}
                 >
-                  <IconComponent className="icon" />
+                  <IconComponent className="icon text-6xl" />
                 </button>
               );
             })}
           </div>
         </div>
 
-        <div className="mt-20 lg:mt-12">
-          <img
-            className="max-w[550px] bg-cover bg-center bg-no-repeat lg:h-[400px] lg:w-[600px]"
-            src={imagedeveloper}
-            alt=""
-          />
+        <div className="relative mt-20 lg:mt-12 flex justify-center items-center">
+          <div
+            className="rounded-full p-1 flex justify-center items-center"
+            style={{
+              border: "10px solid transparent",
+              borderImage:
+                "linear-gradient(45deg, #4285F4 25%, #34A853 25%, #34A853 50%, #FBBC05 50%, #FBBC05 75%, #EA4335 75%, #EA4335 100%)",
+              borderImageSlice: 1,
+              // borderRadius:"30%",
+            }}
+          >
+            <img
+              className="object-cover"
+              style={{ 
+                height: "450px",
+                width: "800px",
+                // borderradius: "50%",
+                // color: "black",
+                // backgroundcolor: "black",
+              }}
+              src={imagedeveloper}
+              alt="Developer"
+            />
+          </div>
         </div>
       </div>
     </div>
