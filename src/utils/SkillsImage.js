@@ -70,12 +70,23 @@ import picsart from "../Assets/svg/skills/picsart.svg";
 import sketch from "../Assets/svg/skills/sketch.svg";
 import unity from "../Assets/svg/skills/unity.svg";
 import wolframalpha from "../Assets/svg/skills/wolframalpha.svg";
-
+import sql from "../Assets/svg/skills/sql.svg";
+import expressjs from "../Assets/svg/skills/assembly.svg";
+import assembly from "../Assets/svg/skills/dotnet.svg";
+import coreldraw from "../Assets/svg/skills/coreldraw.svg";
 import canva from "../Assets/svg/skills/canva.svg";
-
 export const skillsImage = (skill) => {
   const skillID = skill.toLowerCase();
   switch (skillID) {
+    
+    case "sql":
+      return sql;
+    case "express.js":
+      return expressjs;
+    case "assembly":
+      return assembly;
+    case "coreldraw":
+      return coreldraw;
     case "html":
       return html;
     case "photoshop":

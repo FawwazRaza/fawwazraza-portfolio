@@ -12,12 +12,12 @@ export const UserData = {
     },
     {
       socialMediaName: "linkedin",
-      url: "www.linkedin.com/in/fawwazraza",
+      url: "https://www.linkedin.com/in/fawwazraza",
       icon: "FaLinkedinIn",
     },
     {
       socialMediaName: "twitter",
-      url: "https://twitter.com/rahulvijay8156",
+      url: "https://x.com/Fawwaz2024?t=1zklgw3BGDKh3Pl_jsSP5g&s=09",
       icon: "AiOutlineTwitter",
     },
     {

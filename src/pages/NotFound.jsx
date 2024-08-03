@@ -10,7 +10,7 @@ function NotFound() {
       </div>
       <p className="px-6 pb-6 text-center text-sm lg:w-2/4 lg:px-20 lg:pb-8 lg:text-base">
         Sorry, we couldn’t find the page you’re looking for. Perhaps you’ve
-        mistyped the URL? Be sure to check your spelling.
+        mistyped the URL? Be sure to check your spelling. Else, you can mail me at fawwazraza2024@gmail.com
       </p>
       <div className="">
         <button

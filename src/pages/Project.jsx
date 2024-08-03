@@ -7,7 +7,7 @@ function Project() {
   return (
     <div className="mb-24 h-auto w-full sm:mb-0 md:h-screen">
       <div>
-        <p className="font-poppins mx-auto w-[50%] pb-10 pt-8 text-center text-2xl tracking-wider text-gray-900 lg:text-3xl">
+        <p className="font-poppins mx-auto w-[50%] pb-10 pt-8 text-center text-2xl tracking-wider text-gray-900 lg:text-3xl font-semibold	">
           Projects
         </p>
       </div>

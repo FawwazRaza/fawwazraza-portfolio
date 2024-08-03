@@ -7,7 +7,7 @@ import {
   AiFillInstagram,
   AiFillCode,
 } from "react-icons/ai";
-import { FaLinkedinIn, FaDiscord } from "react-icons/fa";
+import { FaLinkedinIn, FaDiscord,FaEnvelope } from "react-icons/fa";
 import imagedeveloper from "../Assets/images/person2.jpg";
 
 function Home() {
@@ -19,6 +19,8 @@ function Home() {
     AiOutlineTwitter: AiOutlineTwitter,
     AiFillCode: AiFillCode,
     FaDiscord: FaDiscord,
+    FaEnvelope: FaEnvelope,
+
   };
 
   const socialMediaColors = {
@@ -27,6 +29,8 @@ function Home() {
     twitter: "text-blue-400",
     datacamp: "text-green-500",
     discord: "text-indigo-600",
+    email: "text-red-600",
+
   };
 
   return (
@@ -56,12 +60,18 @@ function Home() {
                 </button>
               );
             })}
+            <button
+              className={`flex items-center justify-center rounded-lg border-none bg-transparent hover:bg-white hover:bg-opacity-20 hover:opacity-80 hover:shadow-lg lg:h-12 lg:w-24 ${socialMediaColors.email}`}
+              onClick={() => window.location.href = 'mailto:fawwazraza2024@gmail.com'}
+            >
+              <FaEnvelope className="icon text-6xl" />
+            </button>
           </div>
         </div>
 
-        <div className="relative mt-20 lg:mt-12 flex justify-center items-center">
+        <div className="relative mt-20 lg:mt-12 flex justify-center items-center ">
           <div
-            className="rounded-full p-1 flex justify-center items-center"
+            className="rounded-full p-1 flex justify-center items-center "
             style={{
               border: "10px solid transparent",
               borderImage:
