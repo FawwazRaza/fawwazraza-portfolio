@@ -46,6 +46,13 @@ export const ProjectsList = {
       githubUrl: "https://github.com/FawwazRaza/Web-Development-Tasks",
     },
     {
+      name: "Medical Conversation Analysis Tool",
+      description:
+      "This project provides a comprehensive suite of tools for processing and analyzing medical conversations between doctors and patients. It leverages cutting-edge natural language processing techniques to transcribe audio, classify speaker roles, and generate concise summaries.",
+      technologies: ["Python", "Hugging face models", "speaker classification","conversation summarization","medical conversations"],
+      githubUrl: "https://github.com/FawwazRaza/Medical-Conversation-Analysis-Tool",
+    },
+    {
       name: "Tetris game",
       description:
       "A feature-rich Tetris game implementation using ASP.NET, offering classic gameplay with modern twists and enhanced features.",
