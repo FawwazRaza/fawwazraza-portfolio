@@ -66,5 +66,12 @@ export const ProjectsList = {
       technologies: ["HTML", "CSS", "JavaScript"],
       githubUrl: "https://github.com/FawwazRaza/DB-lab/blob/main/DB%20lab%20(SQL)/DBLABPROJECT.zip",
     },
+    {
+      name: "Dodge 'Em Game",
+      description:
+      "Welcome to Dodge 'Em Game! Experience the thrill of classic arcade gaming with Dodge 'Em, developed by Carla Meninsky in 1980. Control a brown car, navigate a maze, collect rewards, and avoid collisions with blue opponent cars. With progressive difficulty levels, strategic gameplay, and a nostalgic feel, Dodge 'Em promises endless fun and challenge. Relive the golden age of gaming and test your maneuvering skills in this timeless classic!",
+      technologies: ["C++"],
+      githubUrl: "https://github.com/FawwazRaza/Dodge-Em-Game-c-plus-plus",
+    },
   ],
 };
