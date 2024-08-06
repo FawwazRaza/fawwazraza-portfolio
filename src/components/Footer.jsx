@@ -21,7 +21,7 @@ function Footer() {
   return (
     <div className="mb-2 flex items-center justify-center gap-2">
       <div className="font-poppins text-center text-xs">
-        © Copyright <b>{currentYear}</b> Designed by
+       Credit to @RahulVijay  © Copyright <b>{currentYear}</b> Designed by
       </div>
       <a
         href={ensureAbsoluteUrl(FooterLink)}
