@@ -4,6 +4,8 @@
 
 This is the personal portfolio website of Fawwaz Raza, inspired by the design aesthetics of FAANG and MAANG companies. It showcases Fawwaz's skills, projects, and provides a means for professional connections.
 
+![image](https://github.com/user-attachments/assets/8b4e4d4e-c7e8-471f-8313-f99328ca394c)
+
 ## Features
 
 - **Home**: Introduces Fawwaz Raza with key personal and professional information.
