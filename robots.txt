@@ -1,3 +1,7 @@
 User-agent: *
 Allow: /
+<<<<<<< HEAD
 Sitemap: https://fawwazraza.github.io/fawwazraza-portfolio/sitemap.xml
+=======
+Sitemap: https://fawwazraza.github.io/fawwazraza-portfolio/sitemap.xml
+>>>>>>> 7df21248e4cdab35690c3ea59fafd24b5aa4e769

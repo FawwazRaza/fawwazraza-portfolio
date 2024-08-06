@@ -6,5 +6,10 @@
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
+<<<<<<< HEAD
     
 </urlset>
+=======
+  <!-- Add more URLs for other pages if you have them -->
+</urlset>
+>>>>>>> 7df21248e4cdab35690c3ea59fafd24b5aa4e769
