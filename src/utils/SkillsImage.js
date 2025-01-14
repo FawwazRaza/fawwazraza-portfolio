@@ -246,7 +246,7 @@ export const skillsImage = (skill) => {
       return keras;
     case "vscode":
       return vscode;
-    case "Visual Studio":
+    case "visual studio":
       return visualstudio;
     case "vmware":
       return vmware;
