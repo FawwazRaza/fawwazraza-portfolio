@@ -75,10 +75,17 @@ import expressjs from "../Assets/svg/skills/assembly.svg";
 import assembly from "../Assets/svg/skills/dotnet.svg";
 import coreldraw from "../Assets/svg/skills/coreldraw.svg";
 import canva from "../Assets/svg/skills/canva.svg";
+import fastapi from "../Assets/svg/skills/fastapi.svg";
+import keras from "../Assets/svg/skills/keras.svg";
+import linux from "../Assets/svg/skills/linux.svg";
+import scss from "../Assets/svg/skills/scss.svg";
+import vscode from "../Assets/svg/skills/visual-studio-code.svg";
+import visualstudio from "../Assets/svg/skills/visual-studio.svg";
+import vmware from "../Assets/svg/skills/vmware.svg";
+
 export const skillsImage = (skill) => {
   const skillID = skill.toLowerCase();
   switch (skillID) {
-    
     case "sql":
       return sql;
     case "express.js":
@@ -233,37 +240,18 @@ export const skillsImage = (skill) => {
       return canva;
     case "scss":
       return scss;
-    case "asp.net":
-      return aspnet;
     case "fastapi":
       return fastapi;
-    case "scikit-learn":
-      return scikitlearn;
     case "keras":
       return keras;
-    case "pandas":
-      return pandas;
-    case "visual studio code":
+    case "vscode":
       return vscode;
-    case "visual studio":
+    case "Visual Studio":
       return visualstudio;
-    case "github":
-    case "github pages":
-      return github;
-    case "pycharm":
-      return pycharm;
     case "vmware":
       return vmware;
-    case "cisco packet tracer":
-      return packettracer;
-    case "windows":
-      return windows;
     case "linux":
       return linux;
-    case "google colab":
-      return colab;
-    case "slack":
-      return slack;
     default:
       break;
   }
