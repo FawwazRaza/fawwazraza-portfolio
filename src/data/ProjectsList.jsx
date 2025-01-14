@@ -21,6 +21,27 @@ export const ProjectsList = {
       githubUrl: "https://github.com/FawwazRaza/magnum-opsem",
     },
     {
+      name: " Advanced E-commerce Product Recommendation Chatbot",
+      description:
+        " Implemented semantic search, NLP, and location-aware product recommendations for efficient product discovery.",
+      technologies: ["Python", "OpenAI API", "ChromaDB", "FastAPI", "NumPy", "SciPy", "Langchain", "Scikit-Learn",],
+      githubUrl: "https://github.com/FawwazRaza/AI-chatbot-integrated-in-ecommerce-website",
+    },
+    {
+      name: "Medical Conversation Analysis Tool",
+      description:
+      "This project provides a comprehensive suite of tools for processing and analyzing medical conversations between doctors and patients. It leverages cutting-edge natural language processing techniques to transcribe audio, classify speaker roles, and generate concise summaries.",
+      technologies: ["Python", "Hugging face models", "speaker classification","conversation summarization","medical conversations"],
+      githubUrl: "https://github.com/FawwazRaza/Medical-Conversation-Analysis-Tool",
+    },
+    {
+      name: "EcoCommute Carpooling Solution (Sustainable Transportation, Web Development)",
+      description:
+        "EcoCommute reduces parking, traffic, and carbon emissions in universities through a carpooling platform with driver/rider profiles, ride searches, and safety options.",
+      technologies: ["Django", "Python", "HTML", "CSS", "JavaScript", "SQLite3",],
+      githubUrl: "https://github.com/FawwazRaza/Eco_commute",
+    },
+    {
       name: "AI Projects",
       description:
       "AI Projects repository! This repository serves as a collection of my latest AI-related projects, showcasing various techniques, models, and applications in artificial intelligence.",
@@ -44,13 +65,6 @@ export const ProjectsList = {
         "My portfolio is a website built with React.js and Tailwind CSS, utilizing React Router v6 to enable easy access to multiple pages. It was designed and created entirely by myself, showcasing my skills and projects. The website is responsive and visually appealing, providing a user-friendly experience.",
       technologies: ["React JS", "Tailwind CSS", "Git", "GitHub", "HTML","CSS","Javascript",],
       githubUrl: "https://github.com/FawwazRaza/Web-Development-Tasks",
-    },
-    {
-      name: "Medical Conversation Analysis Tool",
-      description:
-      "This project provides a comprehensive suite of tools for processing and analyzing medical conversations between doctors and patients. It leverages cutting-edge natural language processing techniques to transcribe audio, classify speaker roles, and generate concise summaries.",
-      technologies: ["Python", "Hugging face models", "speaker classification","conversation summarization","medical conversations"],
-      githubUrl: "https://github.com/FawwazRaza/Medical-Conversation-Analysis-Tool",
     },
     {
       name: "Tetris game",
