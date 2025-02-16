@@ -8,7 +8,7 @@ import {
   AiFillCode,
 } from "react-icons/ai";
 import { FaLinkedinIn, FaDiscord,FaEnvelope } from "react-icons/fa";
-import imagedeveloper from "../Assets/images/fawwaz_2.png";
+import imagedeveloper from "../Assets/images/fawwaz_2.jpg";
 
 function Home() {
   const socialMedia = UserData.socialMedia;
