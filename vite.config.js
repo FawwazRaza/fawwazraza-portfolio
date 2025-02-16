@@ -5,3 +5,4 @@ export default defineConfig({
   base: '/fawwazraza-portfolio/',
    plugins: [react()],
 })
+
