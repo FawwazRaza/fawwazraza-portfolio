@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { Link, Events, scrollSpy } from "react-scroll";
+import { Link as ScrollLink, Events, scrollSpy } from "react-scroll";
+import { Link } from "react-router-dom";
 import { CgMenuRight } from "react-icons/cg";
 import { UserData } from "../data/UserData";
 import logo from "../Assets/Fawwaz1.gif";
@@ -49,7 +50,7 @@ const Header = () => {
       </div>
       <nav className="hidden lg:block">
         <div className="cursor-pointer items-center space-x-4 sm:flex sm:flex-col sm:gap-4 lg:flex lg:flex-row lg:gap-6">
-          <Link
+          <ScrollLink
             activeClass="active"
             spy={true}
             smooth={true}
@@ -66,8 +67,8 @@ const Header = () => {
             >
               Home
             </p>
-          </Link>
-          <Link
+          </ScrollLink>
+          <ScrollLink
             activeClass="active"
             spy={true}
             smooth={true}
@@ -80,32 +81,15 @@ const Header = () => {
                 activeSection === "About-section"
                   ? "active"
                   : "text-black hover:text-blue-500 hover:text-xl hover:font-bold"
-                  // : "text-black  "
               }
             >
-              
               About
             </p>
+          </ScrollLink>
+          <Link to="/projectlist" className="text-black hover:text-yellow-400 hover:text-xl hover:font-bold">
+            Projects
           </Link>
-          <Link
-            activeClass="active"
-            spy={true}
-            smooth={true}
-            offset={-150}
-            duration={500}
-            to="Project-section"
-          >
-            <p
-              className={
-                activeSection === "Project-section"
-                  ? "active"
-                  : "text-black hover:text-yellow-400 hover:text-xl hover:font-bold"
-              }
-            >
-              Projects
-            </p>
-          </Link>
-          <Link
+          <ScrollLink
             activeClass="active"
             spy={true}
             smooth={true}
@@ -118,12 +102,11 @@ const Header = () => {
                 activeSection === "Contact-section"
                   ? "active"
                   : "text-black hover:text-red-500 hover:text-xl hover:font-bold"
-                  // : "text-white  "
               }
             >
               Contact
             </p>
-          </Link>
+          </ScrollLink>
           <div>
             <button
               onClick={() => {
@@ -152,7 +135,7 @@ const Header = () => {
           <div
             className={`navbar-bg flex flex-col items-center space-y-4 py-4`}
           >
-            <Link
+            <ScrollLink
               activeClass="active"
               spy={true}
               smooth={true}
@@ -170,8 +153,8 @@ const Header = () => {
               >
                 Home
               </p>
-            </Link>
-            <Link
+            </ScrollLink>
+            <ScrollLink
               activeClass="active"
               spy={true}
               smooth={true}
@@ -189,8 +172,8 @@ const Header = () => {
               >
                 About
               </p>
-            </Link>
-            <Link
+            </ScrollLink>
+            <ScrollLink
               activeClass="active"
               spy={true}
               smooth={true}
@@ -208,8 +191,8 @@ const Header = () => {
               >
                 Projects
               </p>
-            </Link>
-            <Link
+            </ScrollLink>
+            <ScrollLink
               activeClass="active"
               spy={true}
               smooth={true}
@@ -227,7 +210,7 @@ const Header = () => {
               >
                 Contact
               </p>
-            </Link>
+            </ScrollLink>
             <div>
               <button
                 onClick={() => {

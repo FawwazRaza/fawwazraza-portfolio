@@ -1,6 +1,13 @@
 export const ProjectsList = {
   projects: [
     {
+      name: " Advanced E-commerce Product Recommendation Chatbot",
+      description:
+        "A RAG video chatbot to deliver accurate, context-aware answers. Users can upload videos, which are split into chunks and embedded into a vector database. When a question is asked, the chatbot retrieves relevant chunks using similarity search and generates response.",
+      technologies: ["Python","Streamlit","Langchain","ChromaDB","Vector Databases","ngrok","FastAPI","Groq API","Speech-to-Text","Embedding Models","Semantic Search",],
+      githubUrl: "https://github.com/FawwazRaza/QueryClip",
+    },
+    {
       name: "Magnum-opsem",
       description:
         "Magnum-opsem is a cutting-edge e-commerce platform designed for unparalleled customization and seamless user experience. Built with React, SCSS, HTML, and other modern technologies, it offers dynamic features like location-based ordering, customizable headers and footers, and an intuitive product catalog. With its easy-to-use interface, secure checkout, and comprehensive admin dashboard, Magnum-opsem empowers users to create a personalized shopping experience while efficiently managing their e-commerce operations. Explore Magnum-opsem today and elevate your online business with our flexible and powerful platform.",
@@ -19,6 +26,27 @@ export const ProjectsList = {
         "GitHub",
       ],
       githubUrl: "https://github.com/FawwazRaza/magnum-opsem",
+    },
+    {
+      name: " Advanced E-commerce Product Recommendation Chatbot",
+      description:
+        " Implemented semantic search, NLP, and location-aware product recommendations for efficient product discovery.",
+      technologies: ["Python", "OpenAI API", "ChromaDB", "FastAPI", "NumPy", "SciPy", "Langchain", "Scikit-Learn",],
+      githubUrl: "https://github.com/FawwazRaza/AI-chatbot-integrated-in-ecommerce-website",
+    },
+    {
+      name: "Medical Conversation Analysis Tool",
+      description:
+      "This project provides a comprehensive suite of tools for processing and analyzing medical conversations between doctors and patients. It leverages cutting-edge natural language processing techniques to transcribe audio, classify speaker roles, and generate concise summaries.",
+      technologies: ["Python", "Hugging face models", "speaker classification","conversation summarization","medical conversations"],
+      githubUrl: "https://github.com/FawwazRaza/Medical-Conversation-Analysis-Tool",
+    },
+    {
+      name: "EcoCommute Carpooling Solution (Sustainable Transportation, Web Development)",
+      description:
+        "EcoCommute reduces parking, traffic, and carbon emissions in universities through a carpooling platform with driver/rider profiles, ride searches, and safety options.",
+      technologies: ["Django", "Python", "HTML", "CSS", "JavaScript", "SQLite3",],
+      githubUrl: "https://github.com/FawwazRaza/Eco_commute",
     },
     {
       name: "AI Projects",
@@ -44,13 +72,6 @@ export const ProjectsList = {
         "My portfolio is a website built with React.js and Tailwind CSS, utilizing React Router v6 to enable easy access to multiple pages. It was designed and created entirely by myself, showcasing my skills and projects. The website is responsive and visually appealing, providing a user-friendly experience.",
       technologies: ["React JS", "Tailwind CSS", "Git", "GitHub", "HTML","CSS","Javascript",],
       githubUrl: "https://github.com/FawwazRaza/Web-Development-Tasks",
-    },
-    {
-      name: "Medical Conversation Analysis Tool",
-      description:
-      "This project provides a comprehensive suite of tools for processing and analyzing medical conversations between doctors and patients. It leverages cutting-edge natural language processing techniques to transcribe audio, classify speaker roles, and generate concise summaries.",
-      technologies: ["Python", "Hugging face models", "speaker classification","conversation summarization","medical conversations"],
-      githubUrl: "https://github.com/FawwazRaza/Medical-Conversation-Analysis-Tool",
     },
     {
       name: "Tetris game",

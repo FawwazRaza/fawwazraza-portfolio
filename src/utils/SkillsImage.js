@@ -75,10 +75,17 @@ import expressjs from "../Assets/svg/skills/assembly.svg";
 import assembly from "../Assets/svg/skills/dotnet.svg";
 import coreldraw from "../Assets/svg/skills/coreldraw.svg";
 import canva from "../Assets/svg/skills/canva.svg";
+import fastapi from "../Assets/svg/skills/fastapi.svg";
+import keras from "../Assets/svg/skills/keras.svg";
+import linux from "../Assets/svg/skills/linux.svg";
+import scss from "../Assets/svg/skills/scss.svg";
+import vscode from "../Assets/svg/skills/visual-studio-code.svg";
+import visualstudio from "../Assets/svg/skills/visual-studio.svg";
+import vmware from "../Assets/svg/skills/vmware.svg";
+
 export const skillsImage = (skill) => {
   const skillID = skill.toLowerCase();
   switch (skillID) {
-    
     case "sql":
       return sql;
     case "express.js":
@@ -231,6 +238,20 @@ export const skillsImage = (skill) => {
       return wolframalpha;
     case "canva":
       return canva;
+    case "scss":
+      return scss;
+    case "fastapi":
+      return fastapi;
+    case "keras":
+      return keras;
+    case "vscode":
+      return vscode;
+    case "visual studio":
+      return visualstudio;
+    case "vmware":
+      return vmware;
+    case "linux":
+      return linux;
     default:
       break;
   }

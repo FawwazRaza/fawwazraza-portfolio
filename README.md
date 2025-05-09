@@ -54,4 +54,4 @@ MIT License
 
 ---
 
-Designed by Fawwaz Raza © 2024
+Designed by Fawwaz Raza © 2024. credit to Rahul Vijay
