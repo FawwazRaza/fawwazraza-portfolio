@@ -1,7 +1,7 @@
 export const ProjectsList = {
   projects: [
     {
-      name: " Advanced E-commerce Product Recommendation Chatbot",
+      name: " QueryClip",
       description:
         "A RAG video chatbot to deliver accurate, context-aware answers. Users can upload videos, which are split into chunks and embedded into a vector database. When a question is asked, the chatbot retrieves relevant chunks using similarity search and generates response.",
       technologies: ["Python","Streamlit","Langchain","ChromaDB","Vector Databases","ngrok","FastAPI","Groq API","Speech-to-Text","Embedding Models","Semantic Search",],
