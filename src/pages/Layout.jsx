@@ -9,22 +9,32 @@ import { Element } from "react-scroll";
 
 function Layout() {
   return (
-    <>
+    <div className="relative min-h-screen transition-colors duration-500">
+      {/* Fixed Header */}
       <Header />
-      <Element name="Home-section">
-        <Home />
-      </Element>
-      <Element name="About-section">
-        <About />
-      </Element>
-      <Element name="Project-section">
-        <Project />
-      </Element>
-      <Element name="Contact-section">
-        <Contact />
-      </Element>
+      
+      {/* Main Content Sections */}
+      <main className="relative">
+        <Element name="Home-section">
+          <Home />
+        </Element>
+        
+        <Element name="About-section">
+          <About />
+        </Element>
+        
+        <Element name="Project-section">
+          <Project />
+        </Element>
+        
+        <Element name="Contact-section">
+          <Contact />
+        </Element>
+      </main>
+      
+      {/* Footer */}
       <Footer />
-    </>
+    </div>
   );
 }
 

@@ -1,33 +1,60 @@
+import React, { useState, useEffect } from "react";
 import Cards from "../components/Cards";
-import { FaLocationArrow } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
 function Project() {
+  const [isVisible, setIsVisible] = useState(false);
   const navigate = useNavigate();
-  return (
-    <div className="mb-24 h-auto w-full sm:mb-0 md:h-screen">
-      <div>
-        <p className="font-poppins mx-auto w-[50%] pb-10 pt-8 text-center text-2xl tracking-wider text-gray-900 lg:text-3xl font-semibold	">
-          Projects
-        </p>
-      </div>
-      <div className="mx-auto mb-2 grid w-[90%] grid-cols-1 gap-4 sm:mb-8 md:grid-cols-2">
-        <Cards />
-      </div>
-      <div className="mx-auto w-[90%]">
-        <p className="flex cursor-pointer items-center gap-2 font-semibold leading-tight text-gray-900">
-          <div
-            class="font-poppins group relative"
-            onClick={() => {
-              navigate("/projectlist");
-            }}
-          >
-            <span>View Full Project Archive</span>
-            <span class="absolute bottom-0 left-0 top-6 h-[2px] w-full bg-gray-900 opacity-0 transition-opacity group-hover:opacity-100"></span>
-          </div>
 
-          <FaLocationArrow />
-        </p>
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  return (
+    <div className="relative min-h-screen w-full py-12 lg:py-20">
+      {/* Floating background */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-40">
+        <div className="absolute top-40 left-10 w-64 h-64 bg-purple-300 dark:bg-gradient-to-br dark:from-purple-500/25 dark:to-pink-500/20 rounded-full filter blur-3xl animate-float"></div>
+        <div className="absolute bottom-40 right-10 w-64 h-64 bg-pink-300 dark:bg-gradient-to-br dark:from-pink-500/20 dark:to-purple-500/25 rounded-full filter blur-3xl animate-float-delayed"></div>
+      </div>
+
+      <div className="relative z-10 mx-auto w-[90%] max-w-7xl">
+        {/* Section Header */}
+        <div 
+          className={`text-center mb-16 transition-all duration-1000 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'
+          }`}
+        >
+          <h2 className="font-poppins text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+            Featured Projects
+          </h2>
+          <p className="font-poppins text-lg text-gray-600 dark:text-cyan-300 max-w-2xl mx-auto">
+            Showcasing my best work in software development, AI, and web technologies
+          </p>
+        </div>
+
+        {/* Projects Grid - 2 columns max */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-12 max-w-6xl mx-auto">
+          <Cards />
+        </div>
+
+        {/* View All Projects Link */}
+        <div 
+          className={`flex justify-center transition-all duration-1000 delay-500 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+        >
+          <button
+            onClick={() => navigate("/projectlist")}
+            className="group flex items-center gap-3 px-8 py-4 glass-card rounded-2xl hover:scale-105 transition-all duration-300"
+          >
+            <span className="font-poppins text-lg font-semibold text-gray-900 dark:text-gray-100">
+              View Full Project Archive
+            </span>
+            <FaArrowRight className="text-blue-600 dark:text-cyan-400 group-hover:translate-x-2 transition-transform duration-300" />
+          </button>
+        </div>
       </div>
     </div>
   );

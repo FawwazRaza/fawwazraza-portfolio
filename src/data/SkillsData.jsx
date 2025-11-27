@@ -1,30 +1,4 @@
 export const skillsData = [
-  "html",
-  "css",
-  "javascript",
-  "react",
-  "git",
-  "materialui",
-  "bootstrap",
-  "tailwind",
-  "photoshop",
-  "c++",
-  "sql",
-  "mongodb",
-  "express.js",
-  "assembly",
-  "microsoft office",
-  "coreldraw",
-  "linux",
-  "keras",
-  "python",
-  "vscode",
-  "visual studio",
-  "canva",
-  "vmware",
-  "numpy",
-  "fastapi",
-  "django",
-  "mysql",
-  "scss"
+  "HTML", "CSS", "JavaScript", "React", "Git", "MaterialUI", "Bootstrap", "Tailwind", "Photoshop", "C++", "SQL", "MongoDB", "Express.js", "Assembly", "CorelDRAW", "Linux", "Keras", "Python", "VSCode", "Visual Studio", "Canva", "VMware", "NumPy", "FastAPI", "Django", "MySQL", "SCSS", "LiveKit"
+
 ];

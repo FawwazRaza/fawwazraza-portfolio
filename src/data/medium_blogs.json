@@ -1,0 +1,68 @@
+[
+  {
+    "id": "deploy-web-portfolio-for-free-on-github-pages-a-step-by-step-guide",
+    "title": "🚀 Deploy Website or Web Pages for Free on GitHub Pages: A Step-by-Step Guide",
+    "excerpt": "Practical walkthrough for taking a local React (or any web) project live using GitHub Pages: repo setup, build configuration, gh-pages deployment script, verification steps, and post-launch optimization tips.",
+    "url": "https://medium.com/@fawwazraza2024/deploy-web-portfolio-for-free-on-github-pages-a-step-by-step-guide-96bdff8f8278",
+    "published_at": "2024-08-08",
+    "read_time": "4 min read",
+    "claps": 0,
+    "image_url": "",
+    "tags": ["GitHub Pages", "Web Deployment", "React", "Frontend", "Portfolio"],
+    "extraction_quality": "partial",
+    "notes": "Tags inferred; clap count not visible in captured snippet so set to 0."
+  },
+  {
+    "id": "n8n-mcp-a2a-agentic-rag-ai-agents",
+    "title": "n8n, MCP, A2A, Agentic RAG, AI Agents",
+    "excerpt": "High-level mental models for five building blocks: n8n automation, MCP shared context, A2A agent messaging, Agentic RAG retrieval + reasoning, and autonomous AI agents—plus how they compose in real workflows.",
+    "url": "https://medium.com/@fawwazraza2024/n8n-mcp-a2a-agentic-rag-ai-agents-bd917668ebeb",
+    "published_at": "2025-08-12",
+    "read_time": "4 min read",
+    "claps": 11,
+    "image_url": "",
+    "tags": ["n8n", "AI Agent Development", "MCP Protocol", "Agentic RAG", "Multi-Agent Systems"],
+    "extraction_quality": "good",
+    "notes": "Clap count and tags captured from page footer sections."
+  },
+  {
+    "id": "model-context-protocol-mcp-a-beginners-guide-to-smarter-ai-agents",
+    "title": "Model Context Protocol (MCP): A Beginner’s Guide to Smarter AI Agents",
+    "excerpt": "Introductory guide explaining MCP as shared context infrastructure for multi-agent systems: memory, coordination, architecture components, workflow, and why persistent context elevates agent capabilities.",
+    "url": "https://medium.com/@fawwazraza2024/model-context-protocol-mcp-a-beginners-guide-to-smarter-ai-agents-b224ab30f386",
+    "published_at": "2025-07-11",
+    "read_time": "5 min read",
+    "claps": 0,
+    "image_url": "",
+    "tags": ["MCP Protocol", "Multi Agent Systems", "AI Agent Architecture", "Enterprise AI Workflows", "Context Aware AI"],
+    "extraction_quality": "good",
+    "notes": "Tags captured; clap count not visible (login gate) so set to 0."
+  },
+  {
+    "id": "mcp-a2a-and-acp",
+    "title": "MCP, A2A, and ACP",
+    "excerpt": "Comparison of three protocols—MCP for contextual resource access, A2A for cross-agent internet messaging, and ACP for local/edge real-time coordination—framed with analogies, use cases, and selection checklist.",
+    "url": "https://medium.com/@fawwazraza2024/mcp-a2a-and-acp-842becb949f8",
+    "published_at": "2025-07-11",
+    "read_time": "5 min read",
+    "claps": 0,
+    "image_url": "",
+    "tags": ["AI Agent Architecture", "Multi Agent Protocols", "MCP", "A2A Protocol", "Protocol Comparison"],
+    "extraction_quality": "good",
+    "notes": "Tags captured; clap count not visible so set to 0."
+  },
+  {
+    "id": "speech-to-text-what-i-learned-after-testing-20-models",
+    "title": "Speech-to-Text: What I Learned After Testing 20+ Models",
+    "excerpt": "Empirical comparison of Whisper, Vosk, DeepSpeech, SpeechBrain plus preprocessing strategies (Librosa, Noisereduce, RNNoise, DTLN-RS) and decision guides for accuracy, latency, mobile, research scenarios.",
+    "url": "https://medium.com/@fawwazraza2024/speech-to-text-what-i-learned-after-testing-20-models-e9ff33e1816a",
+    "published_at": "2025-08-28",
+    "read_time": "6 min read",
+    "claps": 0,
+    "image_url": "",
+    "tags": ["Speech Recognition", "Speech To Text", "OpenAI Whisper", "Transcription", "Open Source"],
+    "extraction_quality": "good",
+    "notes": "Tags captured; clap count not visible so set to 0."
+  }
+]
+

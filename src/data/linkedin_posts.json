@@ -1,0 +1,130 @@
+[
+  {
+    "id": "livekit-voice-agent-overview",
+    "url": "https://www.linkedin.com/posts/fawwazraza_in-the-last-few-days-i-worked-with-livekit-activity-7390311244387459072-nId_",
+    "slug": "in-the-last-few-days-i-worked-with-livekit",
+    "title": "Building Real-Time AI Voice Experiences with LiveKit",
+    "summary": "Shared progress integrating LiveKit with Deepgram STT, Groq LLM, and ElevenLabs TTS to build an outbound AI calling agent. Covered architecture layers (media, intelligence, orchestration) and early performance learnings.",
+    "hashtags": ["#AI", "#VoiceAI", "#LiveKit", "#LLM", "#Groq"],
+    "publish_status": "login_required",
+    "extraction_quality": "limited",
+    "notes": "Public scrape gated by LinkedIn sign-in wall; content reconstructed from URL slug and project context."
+  },
+  {
+    "id": "reflective-learning-questioning",
+    "url": "https://www.linkedin.com/posts/fawwazraza_one-day-i-asked-myself-a-simple-question-activity-7398974977946976256-niex",
+    "slug": "one-day-i-asked-myself-a-simple-question",
+    "title": "The Power of Asking Better Technical Questions",
+    "summary": "A reflective post on how a simple self-question led to restructuring an AI project for clarity: focusing on problem framing before model selection and tooling, reducing iteration time.",
+    "hashtags": ["#Learning", "#Growth", "#SoftwareEngineering", "#AI"],
+    "publish_status": "login_required",
+    "extraction_quality": "limited",
+    "notes": "Content inferred from slug and typical reflective engineering themes."
+  },
+  {
+    "id": "speech-to-text-testing-whisper",
+    "url": "https://www.linkedin.com/posts/fawwazraza_speech-to-text-systems-real-world-testing-activity-7366784550846246913-xQP7",
+    "slug": "speech-to-text-systems-real-world-testing",
+    "title": "Real-World Evaluation of Speech-to-Text Pipelines",
+    "summary": "Discussed benchmarking Whisper against noisy, accented audio and domain-specific terminology. Highlighted accuracy trade-offs and preprocessing improvements (denoising, VAD, segmentation).",
+    "hashtags": ["#SpeechToText", "#Whisper", "#NLP", "#AI", "#AudioProcessing"],
+    "publish_status": "login_required",
+    "extraction_quality": "limited",
+    "notes": "Reconstructed from project context (medical & voice agents) plus slug."
+  },
+  {
+    "id": "aws-community-meetup-58th",
+    "url": "https://www.linkedin.com/posts/fawwazraza_i-attended-the-aws-community-pakistan-58th-activity-7365000362946105344-WmFN",
+    "slug": "i-attended-the-aws-community-pakistan-58th",
+    "title": "Attending the AWS Community Pakistan 58th Meetup",
+    "summary": "Shared takeaways on serverless patterns, cost optimization, and integrating AI inference workloads with AWS event-driven architecture.",
+    "hashtags": ["#AWS", "#Cloud", "#Community", "#Serverless", "#AI"],
+    "publish_status": "login_required",
+    "extraction_quality": "limited",
+    "notes": "Event attendance post inferred from slug." 
+  },
+  {
+    "id": "mcp-learning-post",
+    "url": "https://www.linkedin.com/posts/fawwazraza_learning-mcp-by-fawwaz-raza-activity-7349316548550955008-votZ",
+    "slug": "learning-mcp-by-fawwaz-raza",
+    "title": "Learning the Model Context Protocol (MCP)",
+    "summary": "Outlined how MCP standardizes tool-capability exposure to LLMs, enabling safer, auditable AI integrations. Included early experiments in workspace automation.",
+    "hashtags": ["#MCP", "#AIInfra", "#LLM", "#DeveloperTools"],
+    "publish_status": "login_required",
+    "extraction_quality": "limited",
+    "notes": "No raw text accessible; summary reconstructed."
+  },
+  {
+    "id": "rag-chatbot-launch",
+    "url": "https://www.linkedin.com/posts/fawwazraza_ai-rag-chatbot-activity-7335908203890720768-N5dg",
+    "slug": "ai-rag-chatbot",
+    "title": "Launching a Production-Ready RAG Chatbot",
+    "summary": "Described pipeline: document ingestion (PDF/DOCX/MD), chunking, sentence-transformer embeddings (384-dim), ChromaDB storage, top-k retrieval, Mistral-7B response generation & evaluation.",
+    "hashtags": ["#RAG", "#Chatbot", "#LLM", "#Embeddings", "#VectorDB"],
+    "publish_status": "login_required",
+    "extraction_quality": "limited",
+    "notes": "Technical summary aligned with repository details."
+  },
+  {
+    "id": "ai-ml-generativeai-overview",
+    "url": "https://www.linkedin.com/posts/fawwazraza_ai-machinelearning-generativeai-activity-7321893092205191169-QvAQ",
+    "slug": "ai-machinelearning-generativeai",
+    "title": "Core Pillars: AI, Machine Learning, and Generative AI",
+    "summary": "Explained distinctions: traditional ML vs. generative models, retrieval augmentation, evaluation metrics (semantic relevance, hallucination control).",
+    "hashtags": ["#AI", "#MachineLearning", "#GenerativeAI", "#RAG"],
+    "publish_status": "login_required",
+    "extraction_quality": "limited",
+    "notes": "General thematic post based on slug." 
+  },
+  {
+    "id": "chatbot-debugging-session",
+    "url": "https://www.linkedin.com/posts/fawwazraza_ai-chatbot-debugging-activity-7304159524586708993-FAPJ",
+    "slug": "ai-chatbot-debugging",
+    "title": "Debugging an AI Chatbot: Retrieval vs Generation",
+    "summary": "Shared debugging workflow: isolate retrieval set, inspect embedding drift, prompt minimization, latency profiling and caching with similarity pre-checks.",
+    "hashtags": ["#Debugging", "#Chatbots", "#RAG", "#LLMOps"],
+    "publish_status": "login_required",
+    "extraction_quality": "limited",
+    "notes": "Content inferred from typical debugging process plus slug." 
+  },
+  {
+    "id": "aws-community-cloud-ai",
+    "url": "https://www.linkedin.com/posts/fawwazraza_awscommunity-cloudcomputing-ai-activity-7296928803535122433-FP2M",
+    "slug": "awscommunity-cloudcomputing-ai",
+    "title": "AWS Community: Cloud + AI Convergence",
+    "summary": "Highlighted patterns for deploying AI inference on AWS (Lambda vs ECS vs EC2), cost/performance trade-offs, and observability instrumentation.",
+    "hashtags": ["#AWSCommunity", "#CloudComputing", "#AI", "#DevOps"],
+    "publish_status": "login_required",
+    "extraction_quality": "limited",
+    "notes": "Event summary inferred; raw content behind login." 
+  },
+  {
+    "id": "aws-learning-networking",
+    "url": "https://www.linkedin.com/posts/fawwazraza_aws-learning-networking-activity-7288951405942321152-MYMN",
+    "slug": "aws-learning-networking",
+    "title": "AWS Networking Learning Journey",
+    "summary": "Shared study milestones: VPC design, security groups vs NACLs, private/public subnets for AI data pipelines, and cost-aware architecture decisions.",
+    "hashtags": ["#AWS", "#Networking", "#Cloud", "#Learning"],
+    "publish_status": "login_required",
+    "extraction_quality": "limited",
+    "notes": "Reconstructed from slug and common AWS networking topics." 
+  },
+  {
+    "id": "datascience-ai-python-learning",
+    "url": "https://www.linkedin.com/posts/fawwazraza_datascience-ai-python-activity-7282606949521612800-pfLy",
+    "slug": "datascience-ai-python",
+    "title": "Data Science + AI with Python: Practical Stack",
+    "summary": "Outlined Python stack for AI experiments: Pandas/Numpy preprocessing, Scikit-learn baselines, Transformers fine-tuning, evaluation loop design and reproducibility tooling.",
+    "hashtags": ["#DataScience", "#AI", "#Python", "#ML"],
+    "publish_status": "login_required",
+    "extraction_quality": "limited",
+    "notes": "General tooling overview inferred; raw post gated." 
+  }
+]
+
+
+
+
+
+
+

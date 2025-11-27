@@ -1,7 +1,7 @@
 
 export const UserData = {
   name: "Fawwaz Raza",
-  about:"I'm Fawwaz Raza, a Computer Science student at FAST NUCES Lahore, passionate about software development, web technologies, and AI. As a Dean's Honours List awardee, I strive for excellence in both academics and practical applications of technology. My experience includes an internship at Adaxiom, where I developed a dynamic E-Commerce website, and several personal projects showcasing my technical skills. These range from a website aggregator (GariGator) to a food ordering platform (Magnum Opsem), demonstrating my proficiency in various programming languages and frameworks. I'm skilled in C/C++, JavaScript, Python, React.js, and ASP.Net, among others. I'm comfortable with SQL databases and tools like VS Code and Visual Studio. Beyond coding, I have a keen interest in graphic design, adding a creative dimension to my technical abilities. Currently, I'm focusing on advanced AI, machine learning, and data science concepts. I'm eager to collaborate on innovative projects and contribute to open-source initiatives.",
+  about:"I’m an AI & ML Engineer and Software Developer focused on building intelligent, production-ready systems that create measurable impact. I specialize in LLM applications (RAG, chatbots), NLP pipelines, and modern web development, with hands-on experience delivering scalable solutions in fast-paced environments. Recently, I engineered AI applications at Artificizen, built a high-accuracy RAG chatbot using Mistral-7B + ChromaDB, and deployed Whisper-based transcription workflows achieving 95%+ accuracy.\n\nI bring a balance of strong fundamentals (data structures, algorithms, systems) and practical shipping experience: designing clean APIs, optimizing performance, and writing maintainable code. I’m comfortable owning features end-to-end—from problem framing to deployment—and collaborating across product, design, and engineering to deliver outcomes, not just output.\n\nTechnologies I enjoy: Python, FastAPI, LangChain, OpenAI/Whisper, Streamlit, React, and modern tooling around vector search and LLM orchestration. Beyond the stack, I care about clarity, reliability, and thoughtful user experience.\n\nIf you’re looking for someone who learns quickly, communicates clearly, and consistently ships high-quality work, I’d love to contribute to your team’s mission.",
   resumeUrl: "https://drive.google.com/file/d/1mHUJiRGQfWrdg2YKG90UEm-wcc2lKUYX/view?usp=sharing",
   FooterLink: "www.linkedin.com/in/fawwazraza",
   socialMedia: [
@@ -35,7 +35,8 @@ export const UserData = {
     strings: [
       "Software Developer",
       "Web Developer",
-      "AI and ML Enthusiast",
+      "AI & Machine Learning Engineer",
+      "Full-Stack Developer",
     ],
     autoStart: true,
     loop: true,

@@ -1,0 +1,30 @@
+[
+  {
+    "id": "github-portfolio",
+    "title": "fawwazraza-portfolio",
+    "url": "https://github.com/FawwazRaza/fawwazraza-portfolio",
+    "platform": "github",
+    "description": "Personal portfolio website built with React and Tailwind CSS"
+  },
+  {
+    "id": "github-queryclip",
+    "title": "QueryClip - RAG Video Chatbot",
+    "url": "https://github.com/FawwazRaza/QueryClip",
+    "platform": "github",
+    "description": "AI-powered video analysis using RAG techniques"
+  },
+  {
+    "id": "linkedin-profile",
+    "title": "LinkedIn Profile",
+    "url": "https://www.linkedin.com/in/fawwazraza",
+    "platform": "linkedin",
+    "description": "Professional network and career updates"
+  },
+  {
+    "id": "datacamp",
+    "title": "DataCamp Portfolio",
+    "url": "https://www.datacamp.com/portfolio/fawwaz-rz",
+    "platform": "datacamp",
+    "description": "Data science and analytics projects"
+  }
+]

@@ -82,10 +82,13 @@ import scss from "../Assets/svg/skills/scss.svg";
 import vscode from "../Assets/svg/skills/visual-studio-code.svg";
 import visualstudio from "../Assets/svg/skills/visual-studio.svg";
 import vmware from "../Assets/svg/skills/vmware.svg";
+import livekit from "../Assets/svg/skills/livekit.svg";
 
 export const skillsImage = (skill) => {
   const skillID = skill.toLowerCase();
   switch (skillID) {
+    case "livekit":
+      return livekit;
     case "sql":
       return sql;
     case "express.js":
