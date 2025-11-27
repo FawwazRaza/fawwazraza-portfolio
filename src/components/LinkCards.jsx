@@ -168,7 +168,6 @@ function LinkCards({ limit = null }) {
         {/* Add More Links CTA */}
         <div className="mt-12 text-center">
           <p className="text-gray-600 dark:text-gray-400 text-sm">
-            Want to add more links? Edit <code className="bg-gray-200 dark:bg-gray-800 px-2 py-1 rounded text-xs font-mono text-cyan-600 dark:text-cyan-400">src/data/links.json</code>
           </p>
         </div>
       </div>
