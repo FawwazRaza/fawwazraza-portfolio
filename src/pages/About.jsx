@@ -66,7 +66,7 @@ function About() {
               </h3>
               <LinkCards limit={3} />
               <div className="mt-4">
-                <a href="/#/links" className="inline-flex items-center gap-2 px-4 py-2 glass-card rounded-full text-sm font-semibold hover:scale-105 transition-all text-gray-800 dark:text-white">
+                <a href="https://fawwazraza.github.io/fawwazraza-portfolio/#/links" className="inline-flex items-center gap-2 px-4 py-2 glass-card rounded-full text-sm font-semibold hover:scale-105 transition-all text-gray-800 dark:text-white">
                   View All
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/></svg>
                 </a>
