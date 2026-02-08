@@ -1,5 +1,33 @@
 [
   {
+    "id": "artificizen-fulltime",
+    "company": "Artificizen",
+    "position": "Generative AI & Backend Engineer",
+    "location": "Lahore, Punjab, Pakistan",
+    "type": "Full-time",
+    "start_date": "2025-06",
+    "end_date": "Present",
+    "description": "Leading development on enterprise-scale AI systems and backend architecture. Architecting complete software solutions—from database design to AI integration.",
+    "responsibilities": [
+      "Architected LMS: Multi-tenant AI-powered LMS with AI tutor, voice interaction (STT/TTS), adaptive learning paths, Pinecone vector DB, and multi-agent workflows",
+      "Built Travel Agency: Complete Django backend for 4-tier agency management system (super-admin, agent, agency, client portals) with authentication, CRUD operations, and dashboard analytics",
+      "Engineered ActionFlow: ML pipeline with fine-tuned 30MB Vosk model for voice-to-action commands using custom phoneme mapping",
+      "Developed Workday Integration Platform: LLM agents automating hiring, onboarding, and client search via SOAP/REST APIs",
+      "Implemented Retail AI Agent: Inbound/outbound calling system with voice conversation handling for HR operations"
+    ],
+    "tech_stack": ["Python", "Django", "FastAPI", "Pinecone", "RAG", "LangChain", "Multi-Agent Systems", "Voice AI", "PostgreSQL", "SOAP/REST APIs"],
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/FawwazRaza"
+      },
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/fawwazraza"
+      }
+    ]
+  },
+  {
     "id": "fast-nuces-ta",
     "company": "National University of Computer and Emerging Sciences (FAST NUCES)",
     "position": "Teaching Assistant",
@@ -18,34 +46,6 @@
     "links": []
   },
   {
-    "id": "artificizen-fulltime",
-    "company": "Artificizen",
-    "position": "Generative AI Engineer",
-    "location": "Lahore, Punjab, Pakistan",
-    "type": "Full-time",
-    "start_date": "2025-06",
-    "end_date": "Present",
-    "description": "Building cutting-edge generative AI solutions and leading the development of enterprise-grade AI applications, focusing on chatbots and large language model implementations.",
-    "responsibilities": [
-      "Designed and deployed production-ready AI applications for real-world business challenges",
-      "Led development of intelligent chatbot systems with high semantic accuracy",
-      "Collaborated with cross-functional teams to deliver scalable AI solutions",
-      "Optimized model performance and implemented robust error handling",
-      "Mentored junior team members on best practices in AI development"
-    ],
-    "tech_stack": ["Python", "LangChain", "Large Language Models (LLM)", "FastAPI", "Streamlit", "ChromaDB", "RAG", "Chatbot Development", "Artificial Intelligence (AI)", "Machine Learning"],
-    "links": [
-      {
-        "label": "GitHub",
-        "url": "https://github.com/FawwazRaza"
-      },
-      {
-        "label": "LinkedIn",
-        "url": "https://www.linkedin.com/in/fawwazraza"
-      }
-    ]
-  },
-  {
     "id": "artificizen-intern",
     "company": "Artificizen",
     "position": "Gen AI Engineer Intern",
@@ -58,14 +58,32 @@
       "Built production-ready RAG chatbot using Mistral-7B and ChromaDB achieving 90% semantic accuracy",
       "Implemented modular architecture with FastAPI backend and Streamlit frontend",
       "Designed robust error handling and performance optimization strategies",
-      "Collaborated with cross-functional teams to develop enterprise AI solutions",
-      "Worked on various generative AI applications from concept to deployment"
+      "Collaborated with cross-functional teams to develop enterprise AI solutions"
     ],
-    "tech_stack": ["Python", "Mistral-7B", "ChromaDB", "FastAPI", "Streamlit", "LangChain", "RAG", "Large Language Models (LLM)", "Artificial Intelligence (AI)", "Chatbot Development", "Machine Learning"],
+    "tech_stack": ["Python", "Mistral-7B", "ChromaDB", "FastAPI", "Streamlit", "LangChain", "RAG", "Large Language Models (LLM)"],
+    "links": []
+  },
+  {
+    "id": "adaxiom-intern",
+    "company": "AdAxiom Tech",
+    "position": "Python Developer & AI/ML Intern",
+    "location": "Lahore, Punjab, Pakistan",
+    "type": "Internship",
+    "start_date": "2024-06",
+    "end_date": "2024-08",
+    "description": "Developed AI-powered solutions for e-commerce and healthcare, focusing on chatbot development and medical conversation analysis using advanced NLP techniques.",
+    "responsibilities": [
+      "Built production e-commerce chatbot processing 1000+ products with 95% search accuracy and 0.8s response time",
+      "Implemented RAG system using OpenAI embeddings, GPT-3.5, and ChromaDB",
+      "Designed automated data pipelines for feature extraction and model evaluation using Pandas, NumPy, Scikit-learn",
+      "Achieved 60% improvement in product recommendations",
+      "Developed Medical Conversation Analysis Tool using Whisper achieving 95% accurate transcription"
+    ],
+    "tech_stack": ["Python", "OpenAI API", "ChromaDB", "RAG", "Pandas", "NumPy", "Scikit-learn", "FastAPI"],
     "links": [
       {
-        "label": "Offer Letter",
-        "url": "https://www.linkedin.com/in/fawwazraza"
+        "label": "AI Projects",
+        "url": "https://github.com/FawwazRaza/AI-projects"
       }
     ]
   },
@@ -81,84 +99,27 @@
     "responsibilities": [
       "Deployed OpenAI Whisper model achieving 95%+ accuracy across 1000+ hours of audio transcription",
       "Designed systematic pipeline for audio transcription with text processing and storage",
-      "Developed automated QA system for transcription validation reducing manual review time by 70%",
-      "Enhanced machine learning workflow accessibility through structured data processing",
-      "Documented comprehensive pipeline architecture for future development"
+      "Developed automated QA system for transcription validation reducing manual review time by 70%"
     ],
-    "tech_stack": ["Python", "OpenAI Whisper", "Machine Learning", "Machine Learning Algorithms", "NLP", "Audio Processing", "Artificial Intelligence (AI)"],
-    "links": [
-      {
-        "label": "GitHub Projects",
-        "url": "https://github.com/FawwazRaza/AI-projects"
-      },
-      {
-        "label": "Completion Certificate",
-        "url": "https://www.linkedin.com/in/fawwazraza"
-      }
-    ]
-  },
-  {
-    "id": "adaxiom-intern",
-    "company": "AdAxiom",
-    "position": "Python Developer, AI and ML Engineer",
-    "location": "Lahore, Punjab, Pakistan",
-    "type": "Internship",
-    "start_date": "2024-06",
-    "end_date": "2024-08",
-    "description": "Developed AI-powered solutions for e-commerce and healthcare, focusing on chatbot development and medical conversation analysis using advanced NLP techniques.",
-    "responsibilities": [
-      "Engineered high-performance e-commerce chatbot processing 1000+ products with 95% search accuracy and 0.8s response time",
-      "Implemented vector similarity search with ChromaDB, reducing storage overhead by 40% while maintaining 99.9% uptime",
-      "Enhanced product discovery through vector representations, achieving 60% improvement in recommendations",
-      "Developed Medical Conversation Analysis Tool using Whisper achieving 95% accurate transcription",
-      "Integrated GPT-3.5-turbo and DistilBART for automated summaries and Medical-NER for entity identification",
-      "Implemented user feedback mechanisms and A/B testing for continuous model improvement"
-    ],
-    "tech_stack": ["Python", "OpenAI API", "GPT-3.5-turbo", "Whisper", "ChromaDB", "DistilBART", "Medical-NER", "LangChain", "NLP", "Artificial Intelligence (AI)", "Machine Learning", "Software Development"],
-    "links": [
-      {
-        "label": "AI Projects Repository",
-        "url": "https://github.com/FawwazRaza/AI-projects"
-      }
-    ]
-  },
-  {
-    "id": "softec-officer",
-    "company": "SOFTEC",
-    "position": "Officer at Programming Competition",
-    "location": "Lahore, Punjab, Pakistan",
-    "type": "Seasonal",
-    "start_date": "2024-01",
-    "end_date": "2024-02",
-    "description": "Served as an officer at FAST NUCES programming competition, recognized as Best Officer for outstanding contributions to event organization and execution.",
-    "responsibilities": [
-      "Coordinated programming competition logistics and operations",
-      "Assisted participants with technical queries and competition guidelines",
-      "Managed event scheduling and resource allocation",
-      "Collaborated with organizing committee for seamless event execution",
-      "Received appreciation as Best Officer for exceptional performance"
-    ],
-    "tech_stack": ["Event Management", "Team Coordination", "Programming Competitions"],
+    "tech_stack": ["Python", "OpenAI Whisper", "Machine Learning", "NLP", "Audio Processing"],
     "links": []
   },
   {
     "id": "adsells-intern",
     "company": "Adsells Advertising",
-    "position": "MERN Stack Intern",
+    "position": "MERN Stack Developer Intern",
     "location": "Lahore, Punjab, Pakistan",
     "type": "Internship",
     "start_date": "2023-06",
     "end_date": "2023-08",
-    "description": "Built full-stack e-commerce platform serving 500+ concurrent users with advanced features including location-based ordering and comprehensive admin dashboard.",
+    "description": "Built scalable e-commerce platform with React, Node.js, Express, MongoDB. Improved operational efficiency by 30% and customer satisfaction by 25%.",
     "responsibilities": [
-      "Developed scalable e-commerce platform using React, Node.js, Express, and MongoDB",
-      "Implemented location-based ordering system for enhanced user experience",
-      "Created dynamic customization features improving user engagement",
-      "Built intuitive admin dashboard streamlining operations",
-      "Integrated payment gateway and real-time tracking improving operational efficiency by 30%",
+      "Built scalable e-commerce platform using React, Node.js, Express, and MongoDB",
+      "Implemented dynamic customization, admin dashboard, payment integration, real-time tracking",
+      "Improved operational efficiency by 30%",
       "Enhanced customer satisfaction by 25% through improved platform features"
     ],
-    "tech_stack": ["React.js", "Node.js", "Express.js", "MongoDB", "HTML", "CSS", "JavaScript", "MERN Stack", "C++"],
+    "tech_stack": ["React.js", "Node.js", "Express.js", "MongoDB", "Material-UI", "SCSS"],
     "links": [
       {
         "label": "GitHub",

@@ -1,8 +1,9 @@
 {
-  "Languages": ["Python", "JavaScript", "C++", "SQL", "Assembly"],
-  "Frontend": ["React", "HTML", "CSS", "Tailwind", "Bootstrap", "MaterialUI", "SCSS"],
-  "Backend": ["FastAPI", "Django", "Express.js", "Node.js", "ASP.Net"],
-  "Databases": ["MongoDB", "MySQL", "PostgreSQL", "ChromaDB", "Pinecone"],
-  "ML/AI & LLMs": ["Langchain", "Groq API", "OpenAI API", "Hugging Face", "Keras", "NumPy", "Scikit-learn", "PyTorch"],
-  "Tools & DevOps": ["Git", "GitHub", "VSCode", "Visual Studio", "VMware", "LiveKit", "ngrok", "Docker", "Linux"]
+  "Languages": ["Python", "JavaScript", "C++", "SQL", "HTML", "CSS"],
+  "Frontend": ["React", "Tailwind CSS", "Bootstrap", "MaterialUI", "SCSS", "Streamlit"],
+  "Backend": ["Django", "FastAPI", "Node.js", "Express.js"],
+  "Databases": ["PostgreSQL", "MongoDB", "MySQL", "Pinecone", "ChromaDB"],
+  "ML/AI & LLMs": ["Langchain", "OpenAI API", "Groq API", "Hugging Face", "PyTorch", "Keras", "NumPy", "Scikit-learn"],
+  "Voice AI": ["OpenAI Whisper", "Deepgram API", "ElevenLabs API", "LiveKit"],
+  "Tools & DevOps": ["Git", "GitHub", "Docker", "Linux", "VSCode"]
 }

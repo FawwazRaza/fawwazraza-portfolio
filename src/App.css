@@ -1,39 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Base styles - ORIGINAL light theme as default, REFINED dark theme via .dark class */
+/* ============================================
+   BASE STYLES - Light only
+   ============================================ */
 body {
   font-family: "Raleway", serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: background-color 0.5s ease, color 0.5s ease;
   background-color: #f8fafc;
   color: #1e293b;
-}
-
-.dark body {
-  background-color: #0a0a0c; /* Deeper black for true immersive dark */
-  color: #f1f5f9;
+  overflow-x: hidden;
+  min-height: 100vh;
+  -webkit-overflow-scrolling: touch;
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
   background-color: #f8fafc;
-}
-
-.dark html {
-  background-color: #0a0a0c; /* Match body */
+  -webkit-overflow-scrolling: touch;
 }
 
 * {
   margin: 0;
-  transition-property: background-color, border-color, color, fill, stroke;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 300ms;
 }
 
 #no-scroll {
@@ -41,7 +35,9 @@ html {
   height: 100vh;
 }
 
-/* Preloader - ORIGINAL light, REFINED dark */
+/* ============================================
+   PRELOADER
+   ============================================ */
 #preloader {
   position: fixed;
   top: 0;
@@ -53,29 +49,21 @@ html {
   background-image: url(../src/Assets/bars.svg);
   background-repeat: no-repeat;
   background-position: center;
-  transition: background-color 0.3s ease;
-}
-
-.dark #preloader {
-  background-color: #0a0a0c; /* Match deeper black */
 }
 
 #preloader-none {
   opacity: 0;
 }
 
-/* Modern scrollbar - ORIGINAL light + NEW dark */
+/* ============================================
+   SCROLLBAR
+   ============================================ */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
   background: rgba(148, 163, 184, 0.1);
-}
-
-.dark ::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.03);
-  border-left: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -87,57 +75,38 @@ html {
   background: linear-gradient(135deg, #2563eb 0%, #0891b2 100%);
 }
 
-.dark ::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #22d3ee 0%, #2dd4bf 100%);
-  box-shadow: 0 0 8px rgba(34, 211, 238, 0.4);
-}
-
-.dark ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #06b6d4 0%, #14b8a6 100%);
-  box-shadow: 0 0 12px rgba(34, 211, 238, 0.6);
-}
-
-/* Icon sizes */
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
 .icon {
   font-size: 30px;
 }
 
 .font-poppins {
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
 }
 
-/* Glassmorphic navbar - ORIGINAL light + NEW dark */
+/* ============================================
+   NAVBAR
+   ============================================ */
 .sticky {
-  transition: all 0.3s ease-out 0s !important;
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1) !important;
+  box-shadow: 0 4px 16px rgba(31, 38, 135, 0.08) !important;
   backdrop-filter: blur(20px) !important;
   -webkit-backdrop-filter: blur(20px) !important;
-  background: rgba(255, 255, 255, 0.7) !important;
+  background: rgba(255, 255, 255, 0.75) !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3) !important;
 }
 
-.dark .sticky {
-  background: rgba(0, 0, 0, 0.3) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8) !important;
-}
-
-/* ORIGINAL Light + REFINED Dark Glassmorphic utilities */
+/* ============================================
+   GLASS UTILITIES
+   ============================================ */
 @layer utilities {
   .glass {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
-  }
-
-  .dark .glass {
-    background: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8), inset 0 0 12px rgba(56, 189, 248, 0.05);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.12);
   }
 
   .glass-card {
@@ -145,49 +114,27 @@ html {
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
-    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(31, 38, 135, 0.1);
   }
 
   .glass-card:hover {
     background: rgba(255, 255, 255, 0.85);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
   }
 
-  .dark .glass-card {
-    background: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8), inset 0 0 12px rgba(56, 189, 248, 0.08);
+  /* Hide scrollbar utility */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
   }
-
-  .dark .glass-card:hover {
-    background: rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transform: translateY(-2px);
-    box-shadow: 0 0 20px rgba(34, 211, 238, 0.3), 0 8px 32px 0 rgba(0, 0, 0, 0.9), inset 0 0 16px rgba(56, 189, 248, 0.12);
-  }
-
-  /* Glow effects - ONLY for dark mode with subtle inner glow */
-  .dark .glow-cyan {
-    box-shadow: 0 0 15px rgba(34, 211, 238, 0.3), inset 0 0 8px rgba(56, 189, 248, 0.1);
-  }
-
-  .dark .glow-cyan:hover {
-    box-shadow: 0 0 25px rgba(34, 211, 238, 0.5), inset 0 0 12px rgba(56, 189, 248, 0.15);
-  }
-
-  .dark .glow-teal {
-    box-shadow: 0 0 15px rgba(45, 212, 191, 0.3), inset 0 0 8px rgba(20, 184, 166, 0.1);
-  }
-
-  .dark .glow-teal:hover {
-    box-shadow: 0 0 25px rgba(45, 212, 191, 0.5), inset 0 0 12px rgba(20, 184, 166, 0.15);
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }
 
-/* Wave animation */
+/* ============================================
+   WAVE ANIMATION
+   ============================================ */
 .wave {
   animation-name: wave-animation;
   animation-duration: 2.1s;
@@ -207,7 +154,9 @@ html {
   100% { transform: rotate(0deg); }
 }
 
-/* ORIGINAL Light + NEW Dark Typewriter styles */
+/* ============================================
+   TYPEWRITER
+   ============================================ */
 .Typewriter__wrapper {
   font-size: 2em !important;
   color: #191919 !important;
@@ -215,20 +164,14 @@ html {
   letter-spacing: 1px !important;
 }
 
-.dark .Typewriter__wrapper {
-  color: #22d3ee !important;
-}
-
 .Typewriter__cursor {
   font-size: 2.4em !important;
   color: #191919 !important;
 }
 
-.dark .Typewriter__cursor {
-  color: #2dd4bf !important;
-}
-
-/* Floating animations */
+/* ============================================
+   FLOATING ANIMATIONS - GPU accelerated
+   ============================================ */
 @keyframes float {
   0%, 100% { transform: translateY(0px) translateX(0px); }
   33% { transform: translateY(-20px) translateX(10px); }
@@ -237,16 +180,19 @@ html {
 
 .animate-float {
   animation: float 8s ease-in-out infinite;
+  will-change: transform;
 }
 
 .animate-float-delayed {
   animation: float 10s ease-in-out infinite;
   animation-delay: 1s;
+  will-change: transform;
 }
 
 .animate-float-slow {
   animation: float 12s ease-in-out infinite;
   animation-delay: 0.5s;
+  will-change: transform;
 }
 
 /* Slide-in animation for expandable content */
@@ -267,7 +213,23 @@ html {
   animation: slide-in 0.4s ease-out forwards;
 }
 
-/* Fade in up animation for skills grid */
+/* Slide up animation */
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.3s ease-out forwards;
+}
+
+/* Fade in up animation */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -279,7 +241,38 @@ html {
   }
 }
 
-/* Reduced motion support */
+/* ============================================
+   CSS CONTAINMENT for better scroll performance
+   ============================================ */
+main > * {
+  contain: layout style;
+}
+
+/* GPU-accelerated transforms for smooth 60fps */
+.transform-gpu {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Ensure Framer Motion elements use GPU compositing */
+[style*="transform"] {
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* Smooth image rendering */
+img {
+  content-visibility: auto;
+}
+
+/* Optimize large sections */
+section {
+  contain: layout style;
+}
+
+/* ============================================
+   ACCESSIBILITY - Reduced motion
+   ============================================ */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -287,20 +280,69 @@ html {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .animate-float,
+  .animate-float-delayed,
+  .animate-float-slow {
+    animation: none !important;
   }
 }
 
-/* Mobile responsive */
+/* Pause animations when tab not visible */
+.pause-animations * {
+  animation-play-state: paused !important;
+}
+
+/* ============================================
+   MOBILE RESPONSIVE
+   ============================================ */
 @media (max-width: 767px) {
   .cursor {
     display: none;
   }
   
   .Typewriter__wrapper {
-    font-size: 1.6em !important;
+    font-size: 1.4em !important;
   }
   
   .Typewriter__cursor {
     font-size: 1.4em !important;
   }
+
+  button,
+  a,
+  [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .Typewriter__wrapper {
+    font-size: 1.8em !important;
+  }
+}
+
+/* ============================================
+   FOCUS INDICATORS
+   ============================================ */
+*:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ============================================
+   SELECTION COLORS
+   ============================================ */
+::selection {
+  background: rgba(59, 130, 246, 0.3);
+  color: #1e293b;
 }

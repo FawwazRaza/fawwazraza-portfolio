@@ -46,21 +46,21 @@ function MediumBlogs({ limit = null }) {
                   <SiMedium className="text-white text-lg" />
                 </div>
                 <div className="min-w-0 flex-1">
-                  <h4 className="text-sm font-bold text-gray-900 dark:text-white line-clamp-1 group-hover:text-gray-700 dark:group-hover:text-cyan-400 transition-colors">
+                  <h4 className="text-sm font-bold text-slate-900 line-clamp-1 group-hover:text-slate-700 transition-colors">
                     {blog.title}
                   </h4>
                   <div className="flex items-center gap-2 mt-1">
-                    <span className="text-xs text-gray-500 dark:text-gray-400">
+                    <span className="text-xs text-slate-500">
                       {formatDate(blog.published_at)}
                     </span>
                     {blog.read_time && (
-                      <span className="text-xs text-gray-500 dark:text-gray-400">
+                      <span className="text-xs text-slate-500">
                         · {blog.read_time}
                       </span>
                     )}
                   </div>
                 </div>
-                <FaExternalLinkAlt className="text-xs text-gray-400 group-hover:text-gray-700 dark:group-hover:text-cyan-400 flex-shrink-0 mt-1" />
+                <FaExternalLinkAlt className="text-xs text-slate-400 group-hover:text-slate-700 flex-shrink-0 mt-1" />
               </div>
             </a>
           );
@@ -75,12 +75,12 @@ function MediumBlogs({ limit = null }) {
         {/* Section Header */}
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <SiMedium className="text-3xl text-gray-900 dark:text-white" />
-            <h2 className="font-poppins text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white">
+            <SiMedium className="text-3xl text-slate-900" />
+            <h2 className="font-poppins text-2xl lg:text-3xl font-bold text-slate-900">
               Medium Articles
             </h2>
           </div>
-          <p className="font-poppins text-sm text-gray-600 dark:text-cyan-300 max-w-2xl mx-auto">
+          <p className="font-poppins text-sm text-slate-600 max-w-2xl mx-auto">
             Deep dives into AI, RAG systems, and software architecture
           </p>
         </div>
@@ -96,7 +96,7 @@ function MediumBlogs({ limit = null }) {
                 href={blog.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`group glass-card rounded-2xl overflow-hidden hover:shadow-xl dark:hover:shadow-glow-cyan transition-all duration-500 flex flex-col max-w-[480px] mx-auto w-full ${
+                className={`group glass-card rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-500 flex flex-col max-w-[480px] mx-auto w-full ${
                   isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}
               >
@@ -107,6 +107,8 @@ function MediumBlogs({ limit = null }) {
                       src={blog.image_url}
                       alt={blog.title}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      loading="lazy"
+                      decoding="async"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                   </div>
@@ -122,8 +124,8 @@ function MediumBlogs({ limit = null }) {
                   {/* Header with Medium icon */}
                   <div className="flex items-start justify-between mb-2">
                     <div className="flex items-center gap-2">
-                      <SiMedium className="text-gray-900 dark:text-white text-base flex-shrink-0" />
-                      <span className="text-xs text-gray-500 dark:text-gray-400">
+                      <SiMedium className="text-slate-900 text-base flex-shrink-0" />
+                      <span className="text-xs text-slate-500">
                         {formatDate(blog.published_at)}
                       </span>
                     </div>
@@ -138,33 +140,33 @@ function MediumBlogs({ limit = null }) {
                   </div>
 
                   {/* Title */}
-                  <h3 className="font-poppins text-base font-bold text-gray-900 dark:text-white mb-2 group-hover:text-gray-700 dark:group-hover:text-cyan-400 transition-colors duration-300 line-clamp-2 break-words">
+                  <h3 className="font-poppins text-base font-bold text-slate-900 mb-2 group-hover:text-slate-700 transition-colors duration-300 line-clamp-2 break-words">
                     {blog.title}
                   </h3>
 
                   {/* Excerpt */}
-                  <p className="text-xs text-gray-600 dark:text-gray-400 mb-3 leading-relaxed line-clamp-3 flex-grow break-words hyphens-auto">
+                  <p className="text-xs text-slate-600 mb-3 leading-relaxed line-clamp-3 flex-grow break-words hyphens-auto">
                     {blog.excerpt}
                   </p>
 
                   {/* Metadata */}
-                  <div className="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400 pt-4 border-t border-gray-200 dark:border-gray-700">
+                  <div className="flex items-center justify-between text-sm text-slate-500 pt-4 border-t border-gray-200">
                     <div className="flex items-center gap-4">
                       <div className="flex items-center gap-1">
-                        <FaHeart className="text-gray-600 dark:text-gray-400" />
+                        <FaHeart className="text-slate-600" />
                         <span className="font-semibold text-xs">{blog.claps}</span>
                       </div>
                       <div className="flex items-center gap-1">
-                        <FaClock className="text-gray-600 dark:text-gray-400" />
+                        <FaClock className="text-slate-600" />
                         <span className="font-medium text-xs">{blog.read_time}</span>
                       </div>
                     </div>
-                    <FaExternalLinkAlt className="text-gray-400 group-hover:text-gray-700 dark:group-hover:text-cyan-400 group-hover:translate-x-1 transition-all duration-300 text-sm" />
+                    <FaExternalLinkAlt className="text-slate-400 group-hover:text-slate-700 group-hover:translate-x-1 transition-all duration-300 text-sm" />
                   </div>
                 </div>
 
                 {/* Hover Border Effect */}
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-gray-900/0 to-gray-700/0 group-hover:from-gray-900/10 group-hover:to-gray-700/10 dark:group-hover:from-cyan-500/10 dark:group-hover:to-teal-500/10 transition-all duration-500 pointer-events-none"></div>
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-gray-900/0 to-gray-700/0 group-hover:from-gray-900/10 group-hover:to-gray-700/10 transition-all duration-500 pointer-events-none"></div>
               </a>
             );
           })}
@@ -176,7 +178,7 @@ function MediumBlogs({ limit = null }) {
             href="https://medium.com/@fawwazraza"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-gray-900 to-gray-800 dark:from-gray-800 dark:to-gray-700 text-white rounded-2xl font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
+            className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-gray-900 to-gray-800 text-white rounded-2xl font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
           >
             <SiMedium className="text-2xl" />
             <span>View All Articles on Medium</span>
@@ -188,4 +190,4 @@ function MediumBlogs({ limit = null }) {
   );
 }
 
-export default MediumBlogs;
+export default React.memo(MediumBlogs);

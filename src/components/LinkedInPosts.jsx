@@ -52,21 +52,21 @@ function LinkedInPosts({ limit = null }) {
                   <FaLinkedin className="text-white text-lg" />
                 </div>
                 <div className="min-w-0 flex-1">
-                  <h4 className="text-sm font-bold text-gray-900 dark:text-white line-clamp-1 group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors">
+                  <h4 className="text-sm font-bold text-slate-900 line-clamp-1 group-hover:text-blue-600 transition-colors">
                     {post.title}
                   </h4>
-                  <p className="text-xs text-gray-500 dark:text-gray-400 line-clamp-1 mt-1">
+                  <p className="text-xs text-slate-500 line-clamp-1 mt-1">
                     {post.summary || post.excerpt}
                   </p>
                   {post.hashtags && (
                     <div className="flex gap-1.5 mt-1.5 flex-wrap">
                       {post.hashtags.slice(0, 2).map((tag, i) => (
-                        <span key={i} className="text-xs text-blue-600 dark:text-cyan-400">{tag}</span>
+                        <span key={i} className="text-xs text-blue-600">{tag}</span>
                       ))}
                     </div>
                   )}
                 </div>
-                <FaExternalLinkAlt className="text-xs text-gray-400 group-hover:text-blue-600 dark:group-hover:text-cyan-400 flex-shrink-0 mt-1" />
+                <FaExternalLinkAlt className="text-xs text-slate-400 group-hover:text-blue-600 flex-shrink-0 mt-1" />
               </div>
             </a>
           );
@@ -81,12 +81,12 @@ function LinkedInPosts({ limit = null }) {
         {/* Section Header */}
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <FaLinkedin className="text-3xl text-blue-600 dark:text-blue-500" />
-            <h2 className="font-poppins text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white">
+            <FaLinkedin className="text-3xl text-blue-600" />
+            <h2 className="font-poppins text-2xl lg:text-3xl font-bold text-slate-900">
               LinkedIn Posts
             </h2>
           </div>
-          <p className="font-poppins text-sm text-gray-600 dark:text-cyan-300 max-w-2xl mx-auto">
+          <p className="font-poppins text-sm text-slate-600 max-w-2xl mx-auto">
             Sharing insights on AI, software development, and tech trends
           </p>
         </div>
@@ -103,7 +103,7 @@ function LinkedInPosts({ limit = null }) {
                 href={post.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`group glass-card rounded-2xl overflow-hidden hover:shadow-xl dark:hover:shadow-glow-cyan transition-all duration-500 flex flex-col max-w-[480px] mx-auto w-full ${
+                className={`group glass-card rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-500 flex flex-col max-w-[480px] mx-auto w-full ${
                   isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}
               >
@@ -114,6 +114,8 @@ function LinkedInPosts({ limit = null }) {
                       src={post.image_url}
                       alt={post.title}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      loading="lazy"
+                      decoding="async"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                   </div>
@@ -124,8 +126,8 @@ function LinkedInPosts({ limit = null }) {
                   {/* Header with LinkedIn icon */}
                   <div className="flex items-start justify-between mb-2">
                     <div className="flex items-center gap-2">
-                      <FaLinkedin className="text-blue-600 dark:text-blue-500 text-base flex-shrink-0" />
-                      <span className="text-xs text-gray-500 dark:text-gray-400">
+                      <FaLinkedin className="text-blue-600 text-base flex-shrink-0" />
+                      <span className="text-xs text-slate-500">
                         {formatDate(post.published_at)}
                       </span>
                     </div>
@@ -139,37 +141,37 @@ function LinkedInPosts({ limit = null }) {
                   </div>
 
                   {/* Title */}
-                  <h3 className="font-poppins text-base font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors duration-300 line-clamp-2">
+                  <h3 className="font-poppins text-base font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors duration-300 line-clamp-2">
                     {post.title}
                   </h3>
 
                   {/* Excerpt */}
-                  <p className="text-xs text-gray-600 dark:text-gray-400 mb-3 leading-relaxed line-clamp-3 flex-grow break-words hyphens-auto">
+                  <p className="text-xs text-slate-600 mb-3 leading-relaxed line-clamp-3 flex-grow break-words hyphens-auto">
                     {post.excerpt || post.summary}
                   </p>
 
                   {/* Hashtags or Engagement Stats */}
-                  <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400 pt-4 border-t border-gray-200 dark:border-gray-700">
+                  <div className="flex items-center gap-4 text-sm text-slate-500 pt-4 border-t border-gray-200">
                     {post.hashtags ? (
                       <div className="flex flex-wrap gap-1 flex-1">
                         {post.hashtags.slice(0, 3).map((tag, i) => (
-                          <span key={i} className="text-[10px] text-blue-600 dark:text-cyan-400">{tag}</span>
+                          <span key={i} className="text-[10px] text-blue-600">{tag}</span>
                         ))}
                       </div>
                     ) : (
                       <>
                         <div className="flex items-center gap-1">
-                          <FaThumbsUp className="text-blue-600 dark:text-blue-500" />
+                          <FaThumbsUp className="text-blue-600" />
                           <span className="font-semibold text-xs">{likes}</span>
                         </div>
                         <div className="flex items-center gap-1">
-                          <FaCommentAlt className="text-green-600 dark:text-green-500" />
+                          <FaCommentAlt className="text-green-600" />
                           <span className="font-semibold text-xs">{comments}</span>
                         </div>
                       </>
                     )}
                     <div className="ml-auto">
-                      <FaExternalLinkAlt className="text-gray-400 group-hover:text-blue-600 dark:group-hover:text-cyan-400 group-hover:translate-x-1 transition-all duration-300 text-sm" />
+                      <FaExternalLinkAlt className="text-slate-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all duration-300 text-sm" />
                     </div>
                   </div>
                 </div>
@@ -197,7 +199,7 @@ function LinkedInPosts({ limit = null }) {
 
         {/* Note */}
         <div className="mt-8 text-center">
-          <p className="text-gray-600 dark:text-gray-400 text-sm">
+          <p className="text-slate-600 text-sm">
           </p>
         </div>
       </div>
@@ -205,4 +207,4 @@ function LinkedInPosts({ limit = null }) {
   );
 }
 
-export default LinkedInPosts;
+export default React.memo(LinkedInPosts);

@@ -1,0 +1,196 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage[left=0.45in,right=0.45in,top=0.4in,bottom=0.4in]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fontawesome5}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\raggedright
+
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue}
+
+% Compact section formatting
+\titleformat{\section}{\large\bfseries}{}{0pt}{}[\titlerule]
+\titlespacing*{\section}{0pt}{6pt}{2pt}
+
+% Custom commands
+\newcommand{\resumeItem}[1]{\item\small{#1}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+\newcommand{\resumeProjectHeading}[2]{
+    \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small\textbf{#1} & #2 \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in,label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-3pt}}
+
+\begin{document}
+
+% HEADER
+\begin{center}
+    \textbf{\Huge FAWWAZ RAZA} \\ \vspace{2pt}
+    \small \faPhone\ +92 325 4027426 $|$ 
+    \href{mailto:fawwazraza2024@gmail.com}{\faEnvelope\ fawwazraza2024@gmail.com} $|$ 
+    \href{https://linkedin.com/in/fawwazraza}{\faLinkedin\ linkedin.com/in/fawwazraza} $|$
+    \href{https://github.com/FawwazRaza}{\faGithub\ github.com/FawwazRaza}
+\end{center}
+
+% PROFESSIONAL SUMMARY
+\section{PROFESSIONAL SUMMARY}
+\small{Generative AI Engineer and Full-Stack Developer with expertise in building production-ready LLM applications, RAG systems, and scalable web platforms. Engineered enterprise AI solutions achieving 90-95\% semantic accuracy using Mistral-7B, OpenAI GPT-4, Groq API, and ChromaDB/Pinecone vector databases. Delivered end-to-end AI/ML pipelines—from data preprocessing and embedding generation to model deployment via FastAPI, Streamlit, and cloud infrastructure. Built full-stack e-commerce platforms serving 500+ users with React, Node.js, Django, and MongoDB. Published technical articles on MCP protocols, Agentic RAG, and multi-agent AI systems. Achieved 99.5\% system uptime, 65\% faster deployment cycles through CI/CD automation, and 359+ GitHub contributions. Three-time Dean's List honoree at FAST NUCES.}
+
+% TECHNICAL SKILLS
+\section{TECHNICAL SKILLS}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Generative AI \& LLMs:} LangChain, OpenAI API (GPT-3.5/4, Whisper), Groq API (LLaMA-3), Mistral-7B, Hugging Face Transformers, RAG Systems, Prompt Engineering, Agentic AI, Multi-Agent Systems, MCP Protocol \\
+     \textbf{ML/AI Frameworks:} PyTorch, TensorFlow, Scikit-learn, Keras, NLTK, spaCy, Medical-NER, DistilBART \\
+     \textbf{Vector Databases \& Search:} ChromaDB, Pinecone, FAISS, Semantic Search, Embedding Models (OpenAI, Sentence-Transformers), Hybrid Retrieval (BM25) \\
+     \textbf{MLOps \& Deployment:} FastAPI, Streamlit, Docker, Git/GitHub, CI/CD Pipelines, Model Serving, ngrok, Vercel, Cloud Infrastructure \\
+     \textbf{Data Engineering:} Pandas, NumPy, SciPy, PySpark, SQL/PostgreSQL/MySQL, MongoDB, Feature Engineering, ETL Pipelines \\
+     \textbf{Programming Languages:} Python, JavaScript (ES6+), TypeScript, C++, SQL, HTML5/CSS3, Assembly \\
+     \textbf{Full-Stack Web Development:} React.js (v18/19), Next.js (v15), Node.js, Express.js, Django, ASP.NET, RESTful APIs, Tailwind CSS, Bootstrap, Material-UI, SCSS, Redux, SWR \\
+     \textbf{Voice \& Speech AI:} Deepgram (STT), ElevenLabs (TTS), Web Speech API, LiveKit, Twilio API, Audio Processing \\
+     \textbf{DevOps \& Tools:} Git/GitHub, Docker, Linux, VMware, VS Code, Postman, Tesseract.js (OCR), Framer Motion
+    }}
+\end{itemize}
+
+% PROFESSIONAL EXPERIENCE
+\section{PROFESSIONAL EXPERIENCE}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Generative AI Engineer}{June 2025 -- Present}
+{Artificizen}{Lahore, Pakistan}
+\resumeItemListStart
+\resumeItem{Architected production-grade RAG chatbot using Mistral-7B and ChromaDB, achieving \textbf{90\% semantic accuracy}; deployed via FastAPI with automated CI/CD reducing deployment time by \textbf{65\%}}
+\resumeItem{Engineered enterprise financial document analysis system with Pinecone vector database, hybrid retriever (BM25 + semantic search), and automated IRR/NPV/TVPI calculation achieving \textbf{95\%+ extraction accuracy}}
+\resumeItem{Designed modular ML pipelines for document processing, embedding generation, vector indexing, and context-aware retrieval with robust error handling—maintaining \textbf{99.5\% system uptime}}
+\resumeItem{Led cross-functional collaboration on enterprise AI solutions, implementing MLOps best practices and scalable cloud infrastructure for high-availability deployments}
+\resumeItem{Mentored junior engineers on LLM integration patterns, prompt engineering techniques, and production debugging strategies}
+\resumeItemListEnd
+
+\resumeSubheading
+{Python Developer \& AI/ML Intern}{June 2024 -- August 2024}
+{AdAxiom Tech}{Lahore, Pakistan}
+\resumeItemListStart
+\resumeItem{Engineered high-performance e-commerce chatbot processing \textbf{1000+ products} using OpenAI embeddings, GPT-3.5, and ChromaDB—achieving \textbf{95\% search accuracy}, \textbf{0.8s response time}, and \textbf{60\% improvement} in recommendations}
+\resumeItem{Implemented vector similarity search reducing storage overhead by \textbf{40\%} while maintaining \textbf{99.9\% uptime}; enhanced product discovery through semantic embeddings}
+\resumeItem{Developed Medical Conversation Analysis Tool integrating Whisper (STT), GPT-3.5, DistilBART (summarization), and Medical-NER—achieving \textbf{95\% transcription accuracy} and \textbf{40\% faster} query response times}
+\resumeItem{Designed automated data pipelines for feature extraction, text preprocessing, and model evaluation using Pandas, NumPy, and Scikit-learn—streamlining ML workflows across multiple projects}
+\resumeItem{Implemented user feedback mechanisms and A/B testing for continuous model improvement and performance optimization}
+\resumeItemListEnd
+
+\resumeSubheading
+{MERN Stack Developer Intern}{June 2023 -- August 2023}
+{Adsells Advertising}{Lahore, Pakistan}
+\resumeItemListStart
+\resumeItem{Built scalable e-commerce platform serving \textbf{500+ concurrent users} using React, Node.js, Express, and MongoDB with location-based ordering system}
+\resumeItem{Implemented dynamic customization features, intuitive admin dashboard, payment gateway integration, and real-time tracking—improving operational efficiency by \textbf{30\%}}
+\resumeItem{Enhanced customer satisfaction by \textbf{25\%} through responsive design, improved UX/UI, and platform optimization}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+% KEY PROJECTS
+\section{KEY PROJECTS}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+{\textbf{LMS AI Learning Management System} $|$ \emph{Python, Django REST, Pinecone, FastAPI, GenAI}}{}
+\resumeItemListStart
+\resumeItem{Built complete AI learning system for online tutoring platform with 4 user types (students, parents, organizations, super-admin) handling multi-branch organization structure}
+\resumeItem{Created AI pipeline to process textbooks: extracted content, built embeddings, stored in Pinecone vector database, and auto-generated personalized learning paths from table of contents matching curriculum requirements}
+\resumeItem{Developed AI chatbot tutor that teaches students step-by-step using book content from vector database, tracks learning time, and generates adaptive quizzes based on student performance}
+\resumeItem{Integrated all AI pipelines into existing Django REST backend working cross-functionally with frontend and DevOps teams, delivering production-ready code with \textbf{automated adaptive learning} that updates paths based on quiz scores}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{Voice-to-Action AI Command System} $|$ \emph{Python, Vosk, OpenAI Whisper, Speech Recognition}}{}
+\resumeItemListStart
+\resumeItem{Built speech-to-text AI system that converts voice commands into app actions (e.g., "open app" triggers specific functions) using Vosk and OpenAI Whisper models}
+\resumeItem{Implemented complete audio preprocessing pipeline: noise removal, voice cleaning, transcription, and action mapping using similarity scoring to match speech to correct actions}
+\resumeItem{Solved Vosk model limitations (small vocabulary, CPU-only processing) by overriding phoneme mappings, expanding word recognition, and improving transcription accuracy for custom vocabulary}
+\resumeItem{Delivered production-ready voice command pipeline with enhanced accuracy through custom phoneme-to-word mapping achieving reliable voice control}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{Enterprise RAG Chatbot for Financial Analysis} $|$ \emph{Python, FastAPI, Groq API, Pinecone, Streamlit}}{}
+\resumeItemListStart
+\resumeItem{Architected financial document analysis system with hybrid retriever (Pinecone vector DB + BM25 keyword search) for due diligence, risk assessment, and investment performance analysis}
+\resumeItem{Implemented automated financial metric extraction (IRR, NPV, TVPI, DPI), peer group comparison, risk-adjusted performance analysis, and stress testing with visual dashboards}
+\resumeItem{Built document processing pipeline with duplicate detection, progress tracking, audit logging, and conversation summarization achieving \textbf{95\%+ accuracy} in KPI extraction}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{LiveKit Voice Agent — Outbound Call System} $|$ \emph{Python, FastAPI, Twilio, LiveKit, Deepgram, Groq, ElevenLabs}}{}
+\resumeItemListStart
+\resumeItem{Developed AI voice calling system placing automated outbound calls via Twilio with real-time audio streaming through LiveKit}
+\resumeItem{Integrated speech-to-text (Deepgram), LLM response generation (Groq), and text-to-speech (ElevenLabs) for natural conversational flow}
+\resumeItem{Implemented call control (start, hangup, session management), configurable response timeouts, voice tones, and conversation memory}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{Open Journal System (OJS)} $|$ \emph{PHP, MySQL, JavaScript, Google OAuth, OAI-PMH Protocol}}{}
+\resumeItemListStart
+\resumeItem{Built comprehensive academic journal management platform supporting complete editorial workflows with role-based dashboards (admin, editor, reviewer, author, publisher)}
+\resumeItem{Implemented submission \& review flow, blind peer review, automated proofreading, email notifications, DOI generation, metadata management, and SEO optimization}
+\resumeItem{Engineered OAI-PMH protocol support for Dublin Core metadata export, logging/audit trails, multi-language localization (English/Urdu), and statistics tracking}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{QueryClip — Video RAG System} $|$ \emph{Python, Whisper, ChromaDB, FastAPI, LangChain, Streamlit}}{\href{https://github.com/FawwazRaza/QueryClip}{GitHub}}
+\resumeItemListStart
+\resumeItem{Built video analysis chatbot enabling timestamp-accurate moment retrieval via Whisper transcription, ChromaDB vector storage, and LLM-powered contextual generation}
+\resumeItem{Engineered data pipeline: audio extraction, intelligent chunking, embedding generation, semantic retrieval, and multi-provider LLM fallback handling}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{DeepFetch RAG Chatbot} $|$ \emph{Mistral-7B, ChromaDB, FastAPI, Streamlit, LangChain}}{\href{https://github.com/FawwazRaza/DeepFetch_RAG_chatbot}{GitHub}}
+\resumeItemListStart
+\resumeItem{Constructed enterprise-grade document Q\&A system supporting PDF/Word/Markdown formats with modular architecture for horizontal scalability}
+\resumeItem{Implemented document ingestion, vector indexing, context-aware retrieval following production model-serving best practices}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{Magnum-opsem E-Commerce Platform} $|$ \emph{React, Redux, Node.js, Express, Material-UI, Bootstrap, SCSS}}{\href{https://github.com/FawwazRaza/magnum-opsem}{GitHub}}
+\resumeItemListStart
+\resumeItem{Developed feature-rich e-commerce platform with location-based ordering, customizable UI components, product catalog management, and responsive design}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+% EDUCATION
+\section{EDUCATION}
+\resumeSubHeadingListStart
+\resumeSubheading
+{National University of Computer \& Emerging Sciences (FAST NUCES)}{Lahore, Pakistan}
+{Bachelor of Science in Computer Science $|$ \textbf{Dean's List:} Fall 2022, Spring 2023, Fall 2023 $|$ \textbf{359+ GitHub Contributions}}{Sep 2022 -- Sep 2026}
+\resumeItemListStart
+\resumeItem{\textbf{Relevant Coursework:} Data Structures \& Algorithms, Machine Learning, Artificial Intelligence, Database Systems, Software Engineering, Theory of Automata, Computer Networks, Operating Systems, Object-Oriented Programming}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+% CERTIFICATIONS
+\section{CERTIFICATIONS \& PUBLICATIONS}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Technical articles:} Medium articles on Model Context Protocol (MCP), Agent-to-Agent (A2A) Communication, Agentic RAG Systems, Multi-Agent AI Architecture, and AI Agent Development Best Practices \\
+     \textbf{DataCamp:} MLOps Concepts, Cloud Computing for Everyone, Supervised Learning with Scikit-learn, Building Web Apps with FastAPI, Introduction to Deep Learning with PyTorch, Understanding Data Science, SQL Fundamentals, Working with the OpenAI API \\
+     \textbf{Udemy:} Complete Generative AI Course with LangChain \& Hugging Face (Krish Naik, 2025)
+    }}
+\end{itemize}
+
+\end{document}

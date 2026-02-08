@@ -14,33 +14,33 @@ import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
  */
 function MarkdownRenderer({ content, className = '' }) {
   return (
-    <div className={`markdown-content prose dark:prose-invert max-w-none ${className}`}>
+    <div className={`markdown-content prose max-w-none ${className}`}>
       <ReactMarkdown
         rehypePlugins={[rehypeRaw, rehypeSanitize]}
         components={{
           // Headings
           h1: ({ node, ...props }) => (
-            <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-4 mt-6" {...props} />
+            <h1 className="text-3xl font-bold text-slate-900 mb-4 mt-6" {...props} />
           ),
           h2: ({ node, ...props }) => (
-            <h2 className="text-2xl font-semibold text-gray-900 dark:text-cyan-300 mb-3 mt-5" {...props} />
+            <h2 className="text-2xl font-semibold text-slate-900 mb-3 mt-5" {...props} />
           ),
           h3: ({ node, ...props }) => (
-            <h3 className="text-xl font-semibold text-gray-800 dark:text-cyan-400 mb-2 mt-4" {...props} />
+            <h3 className="text-xl font-semibold text-slate-800 mb-2 mt-4" {...props} />
           ),
           h4: ({ node, ...props }) => (
-            <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2 mt-3" {...props} />
+            <h4 className="text-lg font-semibold text-slate-800 mb-2 mt-3" {...props} />
           ),
           
           // Paragraphs
           p: ({ node, ...props }) => (
-            <p className="text-base text-gray-700 dark:text-gray-300 leading-relaxed mb-4" {...props} />
+            <p className="text-base text-slate-700 leading-relaxed mb-4" {...props} />
           ),
           
           // Links
           a: ({ node, ...props }) => (
             <a
-              className="text-blue-600 dark:text-cyan-400 hover:text-blue-700 dark:hover:text-cyan-300 underline transition-colors duration-200"
+              className="text-blue-600 hover:text-blue-700 underline transition-colors duration-200"
               target="_blank"
               rel="noopener noreferrer"
               {...props}
@@ -49,10 +49,10 @@ function MarkdownRenderer({ content, className = '' }) {
           
           // Lists
           ul: ({ node, ...props }) => (
-            <ul className="list-disc list-inside mb-4 space-y-2 text-gray-700 dark:text-gray-300" {...props} />
+            <ul className="list-disc list-inside mb-4 space-y-2 text-slate-700" {...props} />
           ),
           ol: ({ node, ...props }) => (
-            <ol className="list-decimal list-inside mb-4 space-y-2 text-gray-700 dark:text-gray-300" {...props} />
+            <ol className="list-decimal list-inside mb-4 space-y-2 text-slate-700" {...props} />
           ),
           li: ({ node, ...props }) => (
             <li className="ml-4" {...props} />
@@ -61,7 +61,7 @@ function MarkdownRenderer({ content, className = '' }) {
           // Blockquotes
           blockquote: ({ node, ...props }) => (
             <blockquote
-              className="border-l-4 border-blue-500 dark:border-cyan-500 pl-4 italic text-gray-600 dark:text-gray-400 my-4 bg-gray-50 dark:bg-gray-800/30 py-2 rounded-r"
+              className="border-l-4 border-blue-500 pl-4 italic text-slate-600 my-4 bg-gray-50 py-2 rounded-r"
               {...props}
             />
           ),
@@ -92,7 +92,7 @@ function MarkdownRenderer({ content, className = '' }) {
             ) : (
               // Inline code
               <code
-                className="bg-gray-200 dark:bg-gray-800 text-pink-600 dark:text-pink-400 px-1.5 py-0.5 rounded text-sm font-mono"
+                className="bg-gray-200 text-pink-600 px-1.5 py-0.5 rounded text-sm font-mono"
                 {...props}
               >
                 {children}
@@ -102,33 +102,33 @@ function MarkdownRenderer({ content, className = '' }) {
           
           // Strong/Bold
           strong: ({ node, ...props }) => (
-            <strong className="font-bold text-gray-900 dark:text-white" {...props} />
+            <strong className="font-bold text-slate-900" {...props} />
           ),
           
           // Emphasis/Italic
           em: ({ node, ...props }) => (
-            <em className="italic text-gray-800 dark:text-gray-200" {...props} />
+            <em className="italic text-slate-800" {...props} />
           ),
           
           // Horizontal rule
           hr: ({ node, ...props }) => (
-            <hr className="my-6 border-gray-300 dark:border-gray-700" {...props} />
+            <hr className="my-6 border-gray-300" {...props} />
           ),
           
           // Tables
           table: ({ node, ...props }) => (
             <div className="overflow-x-auto my-4">
-              <table className="min-w-full border-collapse border border-gray-300 dark:border-gray-700" {...props} />
+              <table className="min-w-full border-collapse border border-gray-300" {...props} />
             </div>
           ),
           thead: ({ node, ...props }) => (
-            <thead className="bg-gray-100 dark:bg-gray-800" {...props} />
+            <thead className="bg-gray-100" {...props} />
           ),
           th: ({ node, ...props }) => (
-            <th className="border border-gray-300 dark:border-gray-700 px-4 py-2 text-left font-semibold text-gray-900 dark:text-white" {...props} />
+            <th className="border border-gray-300 px-4 py-2 text-left font-semibold text-slate-900" {...props} />
           ),
           td: ({ node, ...props }) => (
-            <td className="border border-gray-300 dark:border-gray-700 px-4 py-2 text-gray-700 dark:text-gray-300" {...props} />
+            <td className="border border-gray-300 px-4 py-2 text-slate-700" {...props} />
           ),
         }}
       >

@@ -94,10 +94,14 @@ const skillLogos = {
   'XAMPP (Apache + MySQL)': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg',
   'Google OAuth': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg',
   
+  // Voice AI
+  'OpenAI Whisper': 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/openai.svg',
+  'Vosk': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
+  
   // APIs & Services
   'Twilio API': 'https://www.vectorlogo.zone/logos/twilio/twilio-icon.svg',
-  'Deepgram API': 'https://deepgram.com/favicon.ico',
-  'ElevenLabs API': 'https://elevenlabs.io/favicon.ico',
+  'Deepgram API': 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/openai.svg',
+  'ElevenLabs API': 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/openai.svg',
   'SWR': 'https://swr.vercel.app/favicon/favicon-32x32.png',
   'Tesseract.js (OCR)': 'https://tesseract.projectnaptha.com/img/tesseract.png',
   'Web Speech API': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/chrome/chrome-original.svg',
@@ -131,6 +135,7 @@ function SkillIcon({ skillName }) {
       onError={() => setHasError(true)}
       className="w-12 h-12 md:w-14 md:h-14 object-contain transition-transform duration-300 group-hover:scale-110 drop-shadow-sm"
       loading="lazy"
+      decoding="async"
     />
   );
 }
@@ -153,17 +158,17 @@ function SkillsSummary() {
     <div className="relative w-full py-16 lg:py-24">
       {/* Background effects */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
-        <div className="absolute top-20 right-10 w-96 h-96 bg-cyan-300 dark:bg-gradient-to-br dark:from-cyan-500/20 dark:to-blue-500/15 rounded-full filter blur-3xl animate-float"></div>
-        <div className="absolute bottom-20 left-10 w-96 h-96 bg-teal-300 dark:bg-gradient-to-br dark:from-teal-500/15 dark:to-green-500/20 rounded-full filter blur-3xl animate-float-delayed"></div>
+        <div className="absolute top-20 right-10 w-96 h-96 bg-cyan-300 rounded-full filter blur-3xl animate-float"></div>
+        <div className="absolute bottom-20 left-10 w-96 h-96 bg-teal-300 rounded-full filter blur-3xl animate-float-delayed"></div>
       </div>
 
       <div className="relative z-10 mx-auto w-[92%] max-w-7xl">
         {/* Section Header */}
         <div className="text-center mb-14">
-          <h2 className="font-poppins text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-3">
+          <h2 className="font-poppins text-3xl lg:text-4xl font-bold text-slate-900 mb-3">
             Skills & Technologies
           </h2>
-          <p className="font-poppins text-base lg:text-lg text-gray-600 dark:text-cyan-300 max-w-2xl mx-auto">
+          <p className="font-poppins text-base lg:text-lg text-slate-600 max-w-2xl mx-auto">
             Technologies and tools I work with
           </p>
         </div>
@@ -190,7 +195,7 @@ function SkillsSummary() {
                 </div>
 
                 {/* Skill Name */}
-                <span className="font-poppins text-xs font-medium text-gray-700 dark:text-gray-300 text-center opacity-80 group-hover:opacity-100 transition-opacity duration-300 max-w-[80px] leading-tight">
+                <span className="font-poppins text-xs font-medium text-slate-700 text-center opacity-80 group-hover:opacity-100 transition-opacity duration-300 max-w-[80px] leading-tight">
                   {skill}
                 </span>
               </div>
@@ -204,25 +209,25 @@ function SkillsSummary() {
             <div className="text-3xl font-bold bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent mb-1">
               {allSkills.length}+
             </div>
-            <div className="text-sm text-gray-600 dark:text-gray-300 font-medium">Skills</div>
+            <div className="text-sm text-slate-600 font-medium">Skills</div>
           </div>
           <div className="glass-card rounded-2xl p-5 text-center hover:scale-105 transition-transform duration-300">
             <div className="text-3xl font-bold bg-gradient-to-r from-green-500 to-emerald-500 bg-clip-text text-transparent mb-1">
               {Object.keys(skillsData).length}
             </div>
-            <div className="text-sm text-gray-600 dark:text-gray-300 font-medium">Categories</div>
+            <div className="text-sm text-slate-600 font-medium">Categories</div>
           </div>
           <div className="glass-card rounded-2xl p-5 text-center hover:scale-105 transition-transform duration-300">
             <div className="text-3xl font-bold bg-gradient-to-r from-rose-500 to-pink-500 bg-clip-text text-transparent mb-1">
-              {skillsData['ML/AI & LLMs']?.length || 0}+
+              {(skillsData['ML/AI & LLMs']?.length || 0) + (skillsData['Voice AI']?.length || 0)}+
             </div>
-            <div className="text-sm text-gray-600 dark:text-gray-300 font-medium">AI/ML Tools</div>
+            <div className="text-sm text-slate-600 font-medium">AI/ML Tools</div>
           </div>
           <div className="glass-card rounded-2xl p-5 text-center hover:scale-105 transition-transform duration-300">
             <div className="text-3xl font-bold bg-gradient-to-r from-purple-500 to-violet-500 bg-clip-text text-transparent mb-1">
               {skillsData.Languages?.length || 0}+
             </div>
-            <div className="text-sm text-gray-600 dark:text-gray-300 font-medium">Languages</div>
+            <div className="text-sm text-slate-600 font-medium">Languages</div>
           </div>
         </div>
       </div>
@@ -230,4 +235,4 @@ function SkillsSummary() {
   );
 }
 
-export default SkillsSummary;
+export default React.memo(SkillsSummary);
