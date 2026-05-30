@@ -31,19 +31,19 @@ function About() {
 
             <div className="font-poppins text-sm lg:text-base text-slate-700 leading-relaxed space-y-5 max-w-3xl mx-auto">
               <p>
-                I am a Software Engineer and a fresh graduate from FAST NUCES. I have spent my time in university and internships learning how to build software that is fast, clean, and reliable. I enjoy the logic behind a project, figuring out the best way to move data or the most efficient way to solve a problem.
+                I am a Software Engineer and a fresh graduate from FAST NUCES with hands-on experience building backend systems, AI-powered applications, and scalable APIs using Python, Django, FastAPI, and PostgreSQL.
               </p>
 
               <p>
-                I am deeply interested in algorithms and optimization. I don't just want my code to work; I want it to be efficient. For example, when working on a voice AI project, I focused on fine-tuning a small 30MB model so it could run instantly on a phone without needing the internet. I enjoy looking at a task and finding a way to make it run faster or use less memory.
+                During my internships and projects, I worked on real-world systems involving LLMs, RAG pipelines, semantic search, voice AI, and enterprise automation. I enjoy understanding the logic behind a system whether it is optimizing a database query, improving API performance, or designing scalable backend architectures that are clean and maintainable.
               </p>
 
               <p>
-                I believe that the best software comes from a solid team effort. In my work at different companies, I regularly worked alongside other developers to make sure the backend, frontend, and AI parts all fit together perfectly. I make sure to write clean code and use clear REST API headers so that my teammates can easily integrate their work with mine.
+                I am particularly interested in algorithms, optimization, and system efficiency. I enjoy solving engineering problems by finding ways to make systems faster, lighter, and more reliable. One of the areas I enjoyed most was working on voice AI pipelines and optimizing models for low-latency real-time performance.
               </p>
 
               <p>
-                Even as a fresh grad, I have worked on projects that handle real-world stress. I have built parts of large systems, like a multi-tenant school platform and automated business tools that connect to Workday. Whether I am working on a 4-layer backend or a simple search tool, I follow professional design patterns to keep the code easy to maintain.
+                I also value strong collaboration and clean engineering practices. Across different teams and projects, I worked closely with frontend, backend, AI, and DevOps engineers to build systems that integrate smoothly and scale effectively.
               </p>
 
               <p>

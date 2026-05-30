@@ -1,21 +1,45 @@
 [
   {
+    "id": "systems-limited",
+    "company": "Systems Limited",
+    "position": "AI Engineer",
+    "location": "Lahore, Punjab, Pakistan",
+    "type": "Internship",
+    "start_date": "2026-04",
+    "end_date": "2026-05",
+    "description": "Designed and developed AI-driven internal automation solutions for enterprise-scale operations across HR, IT, Cloud, DevOps, and 24/7 support functions using Azure AI services.",
+    "responsibilities": [
+      "Developed AI automation pipelines for enterprise workflows using LLMs, RAG, and Azure AI services",
+      "Optimized prompt routing, token usage, and inference workflows to improve system efficiency and reduce costs",
+      "Integrated REST APIs, webhooks, and real-time data pipelines for AI-driven automation systems",
+      "Built monitoring and observability dashboards to track AI latency, accuracy, and production health",
+      "Researched and implemented advanced LLM techniques including RAG pipelines, chunking strategies, embeddings, and multi-agent workflows"
+    ],
+    "tech_stack": ["Python", "Azure OpenAI", "Azure AI Services", "RAG", "LLMs", "REST APIs", "Power Automate", "Multi-Agent Systems"],
+    "links": [
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/fawwazraza"
+      }
+    ]
+  },
+  {
     "id": "artificizen-fulltime",
     "company": "Artificizen",
-    "position": "Generative AI & Backend Engineer",
+    "position": "AI and Backend Engineer",
     "location": "Lahore, Punjab, Pakistan",
     "type": "Full-time",
     "start_date": "2025-06",
-    "end_date": "Present",
-    "description": "Leading development on enterprise-scale AI systems and backend architecture. Architecting complete software solutions—from database design to AI integration.",
+    "end_date": "2026-03",
+    "description": "Built multi-tenant backend systems and production AI applications including LMS, Travel Agency, Voice AI systems, and enterprise integrations.",
     "responsibilities": [
-      "Architected LMS: Multi-tenant AI-powered LMS with AI tutor, voice interaction (STT/TTS), adaptive learning paths, Pinecone vector DB, and multi-agent workflows",
-      "Built Travel Agency: Complete Django backend for 4-tier agency management system (super-admin, agent, agency, client portals) with authentication, CRUD operations, and dashboard analytics",
-      "Engineered ActionFlow: ML pipeline with fine-tuned 30MB Vosk model for voice-to-action commands using custom phoneme mapping",
-      "Developed Workday Integration Platform: LLM agents automating hiring, onboarding, and client search via SOAP/REST APIs",
-      "Implemented Retail AI Agent: Inbound/outbound calling system with voice conversation handling for HR operations"
+      "Built multi-tenant backend systems using Django REST Framework with 150+ RESTful API endpoints supporting authentication, analytics, and role-based access control",
+      "Designed and optimized PostgreSQL schemas with 20+ tables, reducing page load time from 2.5s to 0.8s through indexing and query optimization",
+      "Developed production RAG applications using OpenAI, LangChain, Pinecone, and BM25 retrieval, achieving 90%+ semantic search accuracy",
+      "Built real-time voice AI systems using Deepgram, ElevenLabs, Twilio, LiveKit, and Groq with sub-200ms latency for conversational AI workflows",
+      "Dockerized AI backend services and deployed multi-agent workflows for scalable production inference pipelines"
     ],
-    "tech_stack": ["Python", "Django", "FastAPI", "Pinecone", "RAG", "LangChain", "Multi-Agent Systems", "Voice AI", "PostgreSQL", "SOAP/REST APIs"],
+    "tech_stack": ["Python", "Django", "FastAPI", "Pinecone", "RAG", "LangChain", "Multi-Agent Systems", "Voice AI", "PostgreSQL", "Docker"],
     "links": [
       {
         "label": "GitHub",
@@ -34,7 +58,7 @@
     "location": "Lahore, Punjab, Pakistan",
     "type": "Contract",
     "start_date": "2025-08",
-    "end_date": "Present",
+    "end_date": "2026-01",
     "description": "Supporting students in understanding core concepts of Theory of Automata, facilitating better comprehension of formal languages and computational theory.",
     "responsibilities": [
       "Assisted students with complex automata theory concepts and problem-solving",
@@ -48,19 +72,19 @@
   {
     "id": "artificizen-intern",
     "company": "Artificizen",
-    "position": "Gen AI Engineer Intern",
+    "position": "Generative AI Intern",
     "location": "Lahore, Punjab, Pakistan",
     "type": "Internship",
     "start_date": "2025-04",
     "end_date": "2025-05",
     "description": "Developed end-to-end LLM and generative AI applications, building production-ready RAG chatbot systems with high accuracy and performance optimization.",
     "responsibilities": [
-      "Built production-ready RAG chatbot using Mistral-7B and ChromaDB achieving 90% semantic accuracy",
+      "Developed QueryClip, a RAG-based video chatbot that provides timestamp-accurate moment retrieval using Whisper transcription and ChromaDB vector storage",
+      "Built the end-to-end data pipeline for video analysis, including intelligent chunking, embedding generation, and multi-provider LLM fallback handling",
       "Implemented modular architecture with FastAPI backend and Streamlit frontend",
-      "Designed robust error handling and performance optimization strategies",
       "Collaborated with cross-functional teams to develop enterprise AI solutions"
     ],
-    "tech_stack": ["Python", "Mistral-7B", "ChromaDB", "FastAPI", "Streamlit", "LangChain", "RAG", "Large Language Models (LLM)"],
+    "tech_stack": ["Python", "Whisper", "ChromaDB", "FastAPI", "Streamlit", "LangChain", "RAG", "Large Language Models (LLM)"],
     "links": []
   },
   {
@@ -73,11 +97,10 @@
     "end_date": "2024-08",
     "description": "Developed AI-powered solutions for e-commerce and healthcare, focusing on chatbot development and medical conversation analysis using advanced NLP techniques.",
     "responsibilities": [
-      "Built production e-commerce chatbot processing 1000+ products with 95% search accuracy and 0.8s response time",
-      "Implemented RAG system using OpenAI embeddings, GPT-3.5, and ChromaDB",
-      "Designed automated data pipelines for feature extraction and model evaluation using Pandas, NumPy, Scikit-learn",
-      "Achieved 60% improvement in product recommendations",
-      "Developed Medical Conversation Analysis Tool using Whisper achieving 95% accurate transcription"
+      "Developed semantic search chatbot using FastAPI, OpenAI Embeddings, and ChromaDB serving 1000+ products with 95% retrieval accuracy",
+      "Built ETL pipelines using Pandas and NumPy for preprocessing and embedding generation workflows",
+      "Optimized PostgreSQL queries and implemented Redis caching, reducing search latency by 60%",
+      "Designed scalable backend APIs with request validation, async processing, and Swagger/OpenAPI documentation"
     ],
     "tech_stack": ["Python", "OpenAI API", "ChromaDB", "RAG", "Pandas", "NumPy", "Scikit-learn", "FastAPI"],
     "links": [

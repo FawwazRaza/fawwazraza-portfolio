@@ -1,0 +1,47 @@
+[
+  {
+    "id": "dr-wasim",
+    "name": "Dr. Wasim Ahmad Khan",
+    "title": "AI/ML Lead | Research Fellow",
+    "linkedinUrl": "https://www.linkedin.com/in/wasimahmadkhan/",
+    "relationship": "Mentor",
+    "date": "February 18, 2026",
+    "text": "I mentored Fawwaz as he learned about AI and problem-solving. I saw how he works. We covered a lot of ground, from the basics to research-level ideas. He absorbed the material quickly and then went further on his own. I saw him build complex systems from scratch, which showed me how well he understood the concepts. His ability to learn deeply and apply it to real work is clear. He is one of those rare students who doesn't just follow instructions; he thinks through the problem until he finds a good solution. He is ready to do good work."
+  },
+  {
+    "id": "mujtaba",
+    "name": "Mujtaba Ali",
+    "title": "Full Stack Developer | Next.js, React, TypeScript, Node.js | Python, Django, FastAPI",
+    "linkedinUrl": "https://www.linkedin.com/in/mujtaba-a-4b74bb222/",
+    "relationship": "Team Lead",
+    "date": "February 9, 2026",
+    "text": "I had the pleasure of working with Fawwaz Raza as a key contributor on my team, where he excelled in developing and maintaining high-performance web applications using Next.js and Python (including Flask and FastAPI). He played a pivotal role in building LLM-powered chatbots and streamlining backend processes, resulting in a 30% efficiency boost and 20% faster project delivery. His expertise in AI integrations and commitment to scalable, reusable code made him an invaluable collaborator—highly recommend him for any innovative tech role!"
+  },
+  {
+    "id": "yousaf",
+    "name": "Muhammad Yousaf",
+    "title": "ACPS | Software Testing | Deep Learning",
+    "linkedinUrl": "https://www.linkedin.com/in/myousafastian/",
+    "relationship": "Colleague",
+    "date": "February 8, 2026",
+    "text": "I interacted with Fawwaz during programming labs and he has crazy programming skills. Hardworking and dedicated towards state of the art tech ideas."
+  },
+  {
+    "id": "taha",
+    "name": "Muhammad Taha",
+    "title": "ASE @ GoSaaS, Inc. | FAST'25",
+    "linkedinUrl": "https://www.linkedin.com/in/muhammad-taha-994186283/",
+    "relationship": "Colleague",
+    "date": "February 7, 2026",
+    "text": "Fawwaz has a strong work ethic, which I've seen through the projects he has developed and shared with me. He will be a good addition to any team!"
+  },
+  {
+    "id": "shabbir",
+    "name": "Ghulam Shabbir",
+    "title": "Associate Data Scientist @i2c.Inc | Fintech | Data Science | AI | ML | NLP",
+    "linkedinUrl": "https://www.linkedin.com/in/imghulamshabbir/",
+    "relationship": "Colleague",
+    "date": "February 7, 2026",
+    "text": "An outstanding AI Engineer with deep technical knowledge and a passion for innovation. He builds intelligent systems that create real-world value and consistently exceeds expectations."
+  }
+]

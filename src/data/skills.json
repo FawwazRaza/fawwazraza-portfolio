@@ -1,9 +1,8 @@
 {
-  "Languages": ["Python", "JavaScript", "C++", "SQL", "HTML", "CSS"],
-  "Frontend": ["React", "Tailwind CSS", "Bootstrap", "MaterialUI", "SCSS", "Streamlit"],
-  "Backend": ["Django", "FastAPI", "Node.js", "Express.js"],
-  "Databases": ["PostgreSQL", "MongoDB", "MySQL", "Pinecone", "ChromaDB"],
-  "ML/AI & LLMs": ["Langchain", "OpenAI API", "Groq API", "Hugging Face", "PyTorch", "Keras", "NumPy", "Scikit-learn"],
-  "Voice AI": ["OpenAI Whisper", "Deepgram API", "ElevenLabs API", "LiveKit"],
-  "Tools & DevOps": ["Git", "GitHub", "Docker", "Linux", "VSCode"]
+  "Languages": ["Python", "JavaScript", "C++", "SQL", "HTML5", "CSS3"],
+  "Frameworks": ["Django", "Django REST Framework", "FastAPI", "React.js", "Node.js"],
+  "AI/ML": ["LLMs", "RAG", "AI Agents", "NLP", "Deep Learning", "Machine Learning", "LangChain", "OpenAI", "Prompt Engineering", "MCP"],
+  "Databases & Cloud": ["PostgreSQL", "MySQL", "Pinecone", "ChromaDB", "Docker", "REST APIs", "WebSockets"],
+  "Voice AI": ["Deepgram", "ElevenLabs", "Whisper", "LiveKit", "Twilio", "Azure OpenAI", "Azure AI Services"],
+  "Tools": ["Git", "GitHub", "Postman", "JWT", "RBAC", "Microservices", "OCR"]
 }

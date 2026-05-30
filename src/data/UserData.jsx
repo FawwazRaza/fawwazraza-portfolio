@@ -1,8 +1,8 @@
 
 export const UserData = {
   name: "Fawwaz Raza",
-  about: "I'm a Software Engineer who builds production-grade systems at the intersection of AI and full-stack development. Currently at Artificizen, I architect complete software solutions\u2014from database design to AI integration\u2014solving real-world problems with code that scales.\n\nAt Artificizen, I've led development on enterprise platforms like LMS (multi-tenant AI-powered LMS with voice-enabled tutoring), Travel Agency (4-tier agency management backend), and ActionFlow (ML voice command pipeline). I design end-to-end architectures, build REST APIs, integrate AI workflows, and coordinate cross-functional teams to deliver production systems.\n\nI focus on building systems that work in production, scale under load, and deliver measurable business value. Whether it's architecting multi-tenant databases, fine-tuning voice recognition models, or orchestrating multi-agent AI workflows, I solve problems with clean code and clear thinking.",
-  resumeUrl: "https://drive.google.com/file/d/1mHUJiRGQfWrdg2YKG90UEm-wcc2lKUYX/view?usp=sharing",
+  about: "I am a Software Engineer and a fresh graduate from FAST NUCES with hands-on experience building backend systems, AI-powered applications, and scalable APIs using Python, Django, FastAPI, and PostgreSQL.\n\nDuring my internships and projects, I worked on real-world systems involving LLMs, RAG pipelines, semantic search, voice AI, and enterprise automation. I enjoy understanding the logic behind a system whether it is optimizing a database query, improving API performance, or designing scalable backend architectures that are clean and maintainable.\n\nI am particularly interested in algorithms, optimization, and system efficiency. I enjoy solving engineering problems by finding ways to make systems faster, lighter, and more reliable. One of the areas I enjoyed most was working on voice AI pipelines and optimizing models for low-latency real-time performance.\n\nI also value strong collaboration and clean engineering practices. Across different teams and projects, I worked closely with frontend, backend, AI, and DevOps engineers to build systems that integrate smoothly and scale effectively.",
+  resumeUrl: "https://drive.google.com/file/d/12kPL-D9y0mH7wpgwlGYNDUGmjjC5mRYu/view?usp=sharing",
   FooterLink: "www.linkedin.com/in/fawwazraza",
   socialMedia: [
     {
@@ -25,8 +25,8 @@ export const UserData = {
     strings: [
       "Software Engineer",
       "AI & ML Engineer",
-      "Full-Stack Developer",
-      "Generative AI Engineer",
+      "Backend Engineer",
+      "MERN Stack Developer",
     ],
     autoStart: true,
     loop: true,

@@ -12,8 +12,10 @@ import adaxiomLogo from '../Assets/logos/adaxiom tech.png';
 import adsellsLogo from '../Assets/logos/adsells.jpg';
 import fastLogo from '../Assets/logos/fast nuces.png';
 import depLogo from '../Assets/logos/DEP.png';
+import systemsLimitedLogo from '../Assets/logos/systems_limited.png';
 
 const companyLogos = {
+  'Systems Limited': systemsLimitedLogo,
   'Artificizen': artificizenLogo,
   'AdAxiom Tech': adaxiomLogo,
   'Adsells Advertising': adsellsLogo,

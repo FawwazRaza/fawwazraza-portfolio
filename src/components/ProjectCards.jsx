@@ -31,7 +31,21 @@ export default React.memo(function ProjectCards() {
   const navigate = useNavigate();
   const projects = projectsData;
   const [dragConstraint, setDragConstraint] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
   const isDragging = useRef(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      const mobileOrTouch = 
+        window.innerWidth < 768 || 
+        ('ontouchstart' in window) || 
+        (navigator.maxTouchPoints > 0);
+      setIsMobile(mobileOrTouch);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   useEffect(() => {
     if (scrollRef.current) {
@@ -89,10 +103,10 @@ export default React.memo(function ProjectCards() {
           {/* Scrollable row with drag */}
           <motion.div
             ref={scrollRef}
-            className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-6 scrollbar-hide cursor-grab active:cursor-grabbing"
+            className={`flex gap-6 overflow-x-auto snap-x snap-mandatory pb-6 scrollbar-hide ${isMobile ? '' : 'cursor-grab active:cursor-grabbing'}`}
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-            drag="x"
-            dragConstraints={{ left: dragConstraint, right: 0 }}
+            drag={isMobile ? false : "x"}
+            dragConstraints={isMobile ? undefined : { left: dragConstraint, right: 0 }}
             dragElastic={0.1}
             dragTransition={{ bounceStiffness: 300, bounceDamping: 30 }}
             onDragStart={() => { isDragging.current = true; }}
@@ -132,6 +146,18 @@ export default React.memo(function ProjectCards() {
                       >
                         <FaGithub className="text-5xl text-white/50" />
                       </div>
+                      {project.githubUrl && (
+                        <a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={(e) => e.stopPropagation()}
+                          className="absolute top-3 right-3 z-20 w-9 h-9 rounded-full bg-white/90 backdrop-blur-sm border border-slate-100 shadow-sm flex items-center justify-center text-slate-700 hover:text-blue-600 hover:scale-110 hover:shadow-md transition-all duration-300"
+                          title="View Repository"
+                        >
+                          <FaGithub className="text-base" />
+                        </a>
+                      )}
                       {/* Overlay gradient */}
                       <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent opacity-60" />
                     </div>

@@ -10,9 +10,11 @@ import adaxiomTech from '../Assets/logos/adaxiom tech.png';
 import adsells from '../Assets/logos/adsells.jpg';
 import fastNuces from '../Assets/logos/fast nuces.png';
 import dep from '../Assets/logos/DEP.png';
+import systemsLimited from '../Assets/logos/systems_limited.png';
 
 // Map company names to logos
 const companyLogos = {
+  'Systems Limited': systemsLimited,
   'Artificizen': artificizen,
   'National University of Computer and Emerging Sciences (FAST NUCES)': fastNuces,
   'AdAxiom Tech': adaxiomTech,
@@ -27,7 +29,7 @@ function ExperienceTimeline() {
   const [hoveredCard, setHoveredCard] = useState(null);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const cardRefs = useRef([]);
-  const timelineRef = useRef(null);
+  const sectionRef = useRef(null);
 
   // Intersection Observer for scroll-triggered animations
   useEffect(() => {
@@ -38,13 +40,13 @@ function ExperienceTimeline() {
           if (entry.isIntersecting) {
             setTimeout(() => {
               setVisibleItems(prev => ({ ...prev, [index]: true }));
-            }, 100);
+            }, 50);
           }
         });
       },
       {
-        threshold: 0.15,
-        rootMargin: '-50px 0px -50px 0px'
+        threshold: 0.05,
+        rootMargin: '0px 0px -50px 0px'
       }
     );
 
@@ -85,9 +87,10 @@ function ExperienceTimeline() {
     const start = new Date(startDate + '-01');
     const end = endDate === 'Present' ? new Date() : new Date(endDate + '-01');
     
-    const months = (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth());
-    const years = Math.floor(months / 12);
-    const remainingMonths = months % 12;
+    // Add 1 to make the duration inclusive of the starting month
+    const totalMonths = (end.getFullYear() - start.getFullYear()) * 12 + (end.getMonth() - start.getMonth()) + 1;
+    const years = Math.floor(totalMonths / 12);
+    const remainingMonths = totalMonths % 12;
     
     if (years > 0 && remainingMonths > 0) {
       return `${years} yr ${remainingMonths} mo`;
@@ -107,208 +110,195 @@ function ExperienceTimeline() {
   };
 
   return (
-    <div id="Experience-section" ref={timelineRef} className="relative min-h-screen w-full py-12 lg:py-20">
+    <div id="Experience-section" ref={sectionRef} className="relative min-h-screen w-full py-12 lg:py-20 bg-slate-50/50">
       {/* Background effects */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
-        <div className="absolute top-20 left-10 w-48 h-48 bg-purple-200 rounded-full filter blur-3xl animate-float"></div>
-        <div className="absolute bottom-20 right-10 w-48 h-48 bg-pink-200 rounded-full filter blur-3xl animate-float-delayed"></div>
+        <div className="absolute top-20 left-10 w-64 h-64 bg-blue-100 rounded-full filter blur-3xl animate-float"></div>
+        <div className="absolute bottom-20 right-10 w-64 h-64 bg-cyan-100 rounded-full filter blur-3xl animate-float-delayed"></div>
       </div>
 
-      <div className="relative z-10 mx-auto w-[90%] max-w-5xl">
+      <div className="relative z-10 mx-auto w-[90%] max-w-7xl">
         {/* Section Header */}
-        <div className="text-center mb-10">
-          <h2 className="font-poppins text-2xl lg:text-3xl font-bold text-slate-900 mb-2">
+        <div className="text-center mb-12">
+          <h2 className="font-poppins text-3xl lg:text-4xl font-bold text-slate-900 mb-3 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
             Professional Experience
           </h2>
-          <p className="font-poppins text-sm text-slate-500 max-w-2xl mx-auto">
-            My journey in software development and AI engineering
+          <p className="font-poppins text-base text-slate-500 max-w-2xl mx-auto">
+            My journey in software engineering, AI systems development, and building scalable solutions
           </p>
         </div>
 
-        {/* Timeline Container */}
-        <div className="relative">
-          {/* Vertical Line */}
-          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full">
-            <div className="w-full h-full bg-gradient-to-b from-blue-400 via-cyan-400 to-purple-400 opacity-30"></div>
-            <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-blue-400 to-transparent opacity-50 animate-pulse-slow"></div>
-          </div>
+        {/* Experience Grid Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {experienceData.map((exp, index) => {
+            const isExpanded = expandedExperience === index;
+            const isVisible = visibleItems[index];
+            const logo = companyLogos[exp.company];
+            const isCurrent = exp.end_date === 'Present' || index === 0; // Systems Limited is latest
 
-          {/* Experience Items */}
-          <div className="space-y-8">
-            {experienceData.map((exp, index) => {
-              const isExpanded = expandedExperience === index;
-              const isVisible = visibleItems[index];
-              const isLeft = index % 2 === 0;
-              const logo = companyLogos[exp.company];
-
-              return (
-                <div
-                  key={exp.id}
-                  ref={el => cardRefs.current[index] = el}
-                  data-index={index}
-                  className={`relative transition-all duration-700 ease-out ${
-                    isVisible 
-                      ? 'opacity-100 translate-y-0' 
-                      : `opacity-0 ${isLeft ? '-translate-x-10' : 'translate-x-10'} translate-y-8`
-                  }`}
+            return (
+              <div
+                key={exp.id}
+                ref={el => cardRefs.current[index] = el}
+                data-index={index}
+                className={`relative transition-all duration-700 ease-out flex ${
+                  isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-8'
+                }`}
+                style={{ transitionDelay: `${index * 50}ms` }}
+              >
+                {/* Content Card */}
+                <div 
+                  className="bg-white/80 backdrop-blur-xl border border-slate-100 shadow-md rounded-xl p-5 cursor-pointer group hover:shadow-xl transition-all duration-300 flex flex-col w-full relative overflow-hidden"
+                  style={getTiltTransform(index)}
+                  onMouseEnter={() => setHoveredCard(index)}
+                  onMouseLeave={() => setHoveredCard(null)}
+                  onMouseMove={(e) => handleMouseMove(e, index)}
+                  onClick={() => navigate(`/experience/${exp.id}`)}
                 >
-                  {/* Timeline Dot */}
-                  <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 z-10">
-                    <div className={`w-4 h-4 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 border-3 border-white shadow-lg transition-all duration-500 ${
-                      isVisible ? 'scale-100' : 'scale-0'
+                  {/* Hover glow effect */}
+                  <div className={`absolute inset-0 rounded-xl bg-gradient-to-br from-blue-500/5 to-cyan-500/5 transition-opacity duration-300 ${
+                    hoveredCard === index ? 'opacity-100' : 'opacity-0'
+                  }`}></div>
+
+                  {/* Active/Latest indicator badge */}
+                  {isCurrent && (
+                    <div className="absolute top-0 right-0">
+                      <div className="bg-gradient-to-l from-blue-500 to-cyan-500 text-white text-[9px] font-bold px-3 py-1 rounded-bl-lg tracking-wider uppercase shadow-sm">
+                        {index === 0 ? 'Latest' : 'Active'}
+                      </div>
+                    </div>
+                  )}
+                  
+                  {/* Header */}
+                  <div className="relative flex items-start gap-3 mb-4">
+                    {/* Company Logo */}
+                    <div className={`w-12 h-12 flex-shrink-0 rounded-xl overflow-hidden bg-slate-50 border border-slate-100 flex items-center justify-center shadow-sm transition-transform duration-300 ${
+                      hoveredCard === index ? 'scale-110' : ''
                     }`}>
-                      <div className="absolute inset-0 rounded-full bg-blue-400 animate-ping opacity-20"></div>
+                      {logo ? (
+                        <img src={logo} alt={exp.company} className="w-full h-full object-contain p-1.5" loading="lazy" decoding="async" />
+                      ) : (
+                        <span className="text-blue-600 font-bold text-xl">{exp.company.charAt(0)}</span>
+                      )}
+                    </div>
+
+                    <div className="flex-grow min-w-0 pr-8">
+                      <h3 className="font-poppins text-base lg:text-lg font-bold text-slate-900 mb-0.5 leading-snug group-hover:text-blue-600 transition-colors">
+                        {exp.position}
+                      </h3>
+                      <p className="text-sm font-semibold text-blue-600 mb-1">
+                        {exp.company}
+                      </p>
                     </div>
                   </div>
 
-                  {/* Content Card */}
-                  <div className={`md:w-[calc(50%-1.5rem)] ${isLeft ? 'md:mr-auto md:pr-6' : 'md:ml-auto md:pl-6'}`}>
-                    <div 
-                      className="bg-white/80 backdrop-blur-xl border border-slate-100 shadow-md rounded-xl p-4 lg:p-5 cursor-pointer group hover:shadow-lg transition-all duration-300"
-                      style={getTiltTransform(index)}
-                      onMouseEnter={() => setHoveredCard(index)}
-                      onMouseLeave={() => setHoveredCard(null)}
-                      onMouseMove={(e) => handleMouseMove(e, index)}
-                      onClick={() => navigate(`/experience/${exp.id}`)}
-                    >
-                      {/* Hover glow effect */}
-                      <div className={`absolute inset-0 rounded-xl bg-gradient-to-br from-blue-500/5 to-cyan-500/5 transition-opacity duration-300 ${
-                        hoveredCard === index ? 'opacity-100' : 'opacity-0'
-                      }`}></div>
-                      
-                      {/* Header */}
-                      <div className="relative flex items-start gap-3 mb-3">
-                        {/* Company Logo */}
-                        <div className={`w-11 h-11 flex-shrink-0 rounded-lg overflow-hidden bg-slate-50 border border-slate-100 flex items-center justify-center shadow-sm transition-transform duration-300 ${
-                          hoveredCard === index ? 'scale-110' : ''
-                        }`}>
-                          {logo ? (
-                            <img src={logo} alt={exp.company} className="w-full h-full object-contain p-1" loading="lazy" decoding="async" />
-                          ) : (
-                            <span className="text-blue-600 font-bold text-lg">{exp.company.charAt(0)}</span>
-                          )}
-                        </div>
+                  {/* Meta Info */}
+                  <div className="flex flex-col gap-1.5 text-xs text-slate-500 mb-4 flex-grow-0">
+                    <span className="flex items-center gap-2">
+                      <FaMapMarkerAlt className="text-blue-500 text-[11px] w-3 flex-shrink-0" />
+                      <span className="truncate">{exp.location}</span>
+                    </span>
+                    <span className="flex items-center gap-2">
+                      <FaCalendarAlt className="text-cyan-500 text-[11px] w-3 flex-shrink-0" />
+                      <span>{formatDate(exp.start_date)} - {formatDate(exp.end_date)}</span>
+                    </span>
+                    <span className="flex items-center gap-2">
+                      <FaBriefcase className="text-purple-500 text-[11px] w-3 flex-shrink-0" />
+                      <span>{exp.type} ({calculateDuration(exp.start_date, exp.end_date)})</span>
+                    </span>
+                  </div>
 
-                        <div className="flex-grow min-w-0">
-                          <h3 className="font-poppins text-base lg:text-lg font-bold text-slate-900 mb-0.5 truncate">
-                            {exp.position}
-                          </h3>
-                          <p className="text-sm font-semibold text-blue-600 mb-1">
-                            {exp.company}
-                          </p>
+                  {/* Description */}
+                  <p className="relative text-xs text-slate-600 mb-4 leading-relaxed line-clamp-3">
+                    {exp.description}
+                  </p>
 
-                          {/* Meta Info */}
-                          <div className="flex flex-wrap gap-2 text-xs text-slate-500">
-                            <span className="flex items-center gap-1">
-                              <FaMapMarkerAlt className="text-blue-500 text-[10px]" />
-                              {exp.location}
-                            </span>
-                            <span className="flex items-center gap-1">
-                              <FaCalendarAlt className="text-cyan-500 text-[10px]" />
-                              {formatDate(exp.start_date)} - {formatDate(exp.end_date)}
-                            </span>
-                            <span className="flex items-center gap-1">
-                              <FaBriefcase className="text-purple-500 text-[10px]" />
-                              {exp.type}
-                            </span>
-                          </div>
-                        </div>
+                  {/* Tech Stack */}
+                  <div className="relative flex flex-wrap gap-1 mb-4 mt-auto">
+                    {exp.tech_stack.slice(0, 5).map((tech, techIndex) => (
+                      <span
+                        key={techIndex}
+                        className={`px-2 py-0.5 rounded-md bg-slate-50 border border-slate-100 text-slate-600 text-[10px] font-medium transition-all duration-300 ${
+                          hoveredCard === index ? 'hover:scale-105 hover:bg-blue-50 hover:text-blue-600 hover:border-blue-100' : ''
+                        }`}
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                    {exp.tech_stack.length > 5 && (
+                      <span className="px-2 py-0.5 rounded-md bg-blue-50 text-blue-600 border border-blue-100 text-[10px] font-medium">
+                        +{exp.tech_stack.length - 5}
+                      </span>
+                    )}
+                  </div>
 
-                        {/* Duration Badge */}
-                        <div className={`hidden sm:block px-2 py-0.5 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-[10px] font-semibold whitespace-nowrap transition-all duration-300 ${
-                          hoveredCard === index ? 'shadow-lg shadow-blue-500/20' : ''
-                        }`}>
-                          {calculateDuration(exp.start_date, exp.end_date)}
-                        </div>
-                      </div>
-
-                      {/* Description */}
-                      <p className="relative text-xs text-slate-600 mb-3 leading-relaxed line-clamp-2">
-                        {exp.description}
-                      </p>
-
-                      {/* Tech Stack */}
-                      <div className="relative flex flex-wrap gap-1 mb-3">
-                        {exp.tech_stack.slice(0, 6).map((tech, techIndex) => (
-                          <span
-                            key={techIndex}
-                            className={`px-2 py-0.5 rounded-full bg-slate-100 text-slate-700 text-[10px] font-medium transition-all duration-300 ${
-                              hoveredCard === index ? 'transform hover:scale-105 hover:bg-blue-50' : ''
-                            }`}
-                            style={{
-                              transitionDelay: hoveredCard === index ? `${techIndex * 30}ms` : '0ms'
-                            }}
-                          >
-                            {tech}
-                          </span>
-                        ))}
-                        {exp.tech_stack.length > 6 && (
-                          <span className="px-2 py-0.5 rounded-full bg-blue-50 text-blue-600 text-[10px] font-medium">
-                            +{exp.tech_stack.length - 6}
-                          </span>
+                  {/* Responsibilities list if expanded */}
+                  {isExpanded && (
+                    <div className="relative mt-2 mb-4 space-y-3 animate-fade-in w-full">
+                      <div className="bg-slate-50/80 border border-slate-100 p-3.5 rounded-lg">
+                        <h4 className="font-semibold text-xs text-slate-900 mb-2 uppercase tracking-wider">
+                          Key Responsibilities
+                        </h4>
+                        {exp.responsibilities && exp.responsibilities.length > 0 ? (
+                          <ul className="space-y-2">
+                            {exp.responsibilities.map((responsibility, idx) => (
+                              <li 
+                                key={idx} 
+                                className="flex items-start gap-2 text-xs text-slate-600 leading-normal"
+                              >
+                                <span className="text-blue-500 mt-0.5 text-[10px]">▸</span>
+                                <span>{responsibility}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        ) : (
+                          <p className="text-xs text-slate-400">No responsibilities listed.</p>
                         )}
                       </div>
-
-                      {isExpanded && (
-                      <div className="relative mt-4 space-y-3 animate-slide-in">
-                        <div className="bg-slate-50 border border-slate-100 p-3 rounded-lg">
-                          <h4 className="font-semibold text-sm text-slate-900 mb-2">
-                            Key Responsibilities
-                          </h4>
-                          {exp.responsibilities && exp.responsibilities.length > 0 ? (
-                            <ul className="space-y-1.5">
-                              {exp.responsibilities.map((responsibility, idx) => (
-                                <li 
-                                  key={idx} 
-                                  className="flex items-start gap-2 text-xs text-slate-600"
-                                >
-                                  <span className="text-blue-500 mt-0.5 text-[10px]">▸</span>
-                                  <span>{responsibility}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          ) : (
-                            <p className="text-xs text-slate-400">No responsibilities listed.</p>
-                          )}
-                        </div>
-                      </div>
-                    )}
-
-                      {/* Action Buttons */}
-                      <div className="relative mt-3 flex flex-wrap gap-2">
-                        {exp.links?.map((link, linkIndex) => (
-                          <a
-                            key={linkIndex}
-                            href={link.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-1.5 px-2.5 py-1 bg-white border border-slate-100 shadow-sm rounded-md text-xs font-semibold text-slate-700 hover:scale-105 hover:shadow-md transition-all duration-300"
-                          >
-                            {link.label === 'GitHub' ? (
-                              <FaGithub className="text-sm" />
-                            ) : link.label === 'LinkedIn' ? (
-                              <FaLinkedin className="text-sm" />
-                            ) : (
-                              <FaExternalLinkAlt className="text-[10px]" />
-                            )}
-                            <span>{link.label}</span>
-                          </a>
-                        ))}
-
-                        {/* Toggle Details Button */}
-                        <button
-                          onClick={() => setExpandedExperience(isExpanded ? null : index)}
-                          className="flex items-center gap-1.5 px-2.5 py-1 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-md text-xs font-semibold hover:shadow-lg hover:shadow-blue-500/20 hover:scale-105 transition-all duration-300"
-                        >
-                          <span>{isExpanded ? 'Hide Details' : 'View Details'}</span>
-                        </button>
-                      </div>
                     </div>
+                  )}
+
+                  {/* Action Buttons */}
+                  <div className="relative mt-auto pt-2 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2">
+                    <div className="flex gap-2">
+                      {exp.links?.map((link, linkIndex) => (
+                        <a
+                          key={linkIndex}
+                          href={link.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={(e) => e.stopPropagation()}
+                          className="flex items-center justify-center w-8 h-8 bg-slate-50 hover:bg-blue-50 border border-slate-100 hover:border-blue-100 rounded-lg text-slate-600 hover:text-blue-600 shadow-sm transition-all duration-300 hover:scale-105"
+                          title={link.label}
+                        >
+                          {link.label === 'GitHub' ? (
+                            <FaGithub className="text-sm" />
+                          ) : link.label === 'LinkedIn' ? (
+                            <FaLinkedin className="text-sm" />
+                          ) : (
+                            <FaExternalLinkAlt className="text-xs" />
+                          )}
+                        </a>
+                      ))}
+                    </div>
+
+                    {/* Toggle Details Button */}
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setExpandedExperience(isExpanded ? null : index);
+                      }}
+                      className="flex items-center gap-1 px-3 py-1.5 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-lg text-xs font-semibold hover:shadow-md hover:shadow-blue-500/10 hover:scale-105 transition-all duration-300"
+                    >
+                      <span>{isExpanded ? 'Hide Details' : 'View Details'}</span>
+                    </button>
                   </div>
                 </div>
-              );
-            })}
-          </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>

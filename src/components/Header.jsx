@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link as ScrollLink, Events, scrollSpy } from "react-scroll";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { CgMenuRight, CgClose } from "react-icons/cg";
 import { UserData } from "../data/UserData";
 import logo from "../Assets/Fawwaz1.gif";
@@ -9,8 +9,47 @@ const Header = () => {
   const [isScrolling, setisScrolling] = useState(false);
   const [activeSection, setActiveSection] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   const { resumeUrl } = UserData;
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+
+  const renderScrollLink = (toSection, label, isMobile = false) => {
+    const className = isMobile
+      ? "cursor-pointer text-slate-600 hover:text-blue-600 transition-all duration-300 font-medium text-lg"
+      : "cursor-pointer text-slate-600 hover:text-blue-600 transition-all duration-300 font-medium";
+
+    if (location.pathname === "/") {
+      return (
+        <ScrollLink
+          activeClass="text-blue-600 font-bold"
+          spy={true}
+          smooth={true}
+          offset={-100}
+          duration={500}
+          to={toSection}
+          onClick={isMobile ? toggleMobileMenu : undefined}
+          className={className}
+        >
+          {label}
+        </ScrollLink>
+      );
+    } else {
+      return (
+        <Link
+          to="/"
+          state={{ scrollTo: toSection }}
+          onClick={isMobile ? toggleMobileMenu : undefined}
+          className={className}
+        >
+          {label}
+        </Link>
+      );
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,10 +70,6 @@ const Header = () => {
       Events.scrollEvent.remove("begin");
     };
   }, []);
-
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!mobileMenuOpen);
-  };
 
   return (
     <header
@@ -64,62 +99,23 @@ const Header = () => {
         {/* Desktop Navigation */}
         <nav className="hidden lg:block">
           <div className="flex items-center gap-8">
-            <ScrollLink
-              activeClass="text-blue-600 font-bold"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={500}
-              to="Home-section"
-              className="cursor-pointer text-slate-600 hover:text-blue-600 transition-all duration-300 font-medium"
-            >
-              Home
-            </ScrollLink>
-            <ScrollLink
-              activeClass="text-blue-600 font-bold"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={500}
-              to="About-section"
-              className="cursor-pointer text-slate-600 hover:text-blue-600 transition-all duration-300 font-medium"
-            >
-              About
-            </ScrollLink>
-            <ScrollLink
-              activeClass="text-blue-600 font-bold"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={500}
-              to="Experience-section"
-              className="cursor-pointer text-slate-600 hover:text-blue-600 transition-all duration-300 font-medium"
-            >
-              Experience
-            </ScrollLink>
+            {renderScrollLink("Home-section", "Home")}
+            {renderScrollLink("About-section", "About")}
+            {renderScrollLink("Experience-section", "Experience")}
             <Link 
               to="/projectlist" 
               className="cursor-pointer text-slate-600 hover:text-blue-600 transition-all duration-300 font-medium"
             >
               Projects
             </Link>
+            {renderScrollLink("Recommendations-section", "Recommendations")}
             <Link 
               to="/links" 
               className="cursor-pointer text-slate-600 hover:text-blue-600 transition-all duration-300 font-medium"
             >
               Links
             </Link>
-            <ScrollLink
-              activeClass="text-blue-600 font-bold"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={500}
-              to="Contact-section"
-              className="cursor-pointer text-slate-600 hover:text-blue-600 transition-all duration-300 font-medium"
-            >
-              Contact
-            </ScrollLink>
+            {renderScrollLink("Contact-section", "Contact")}
 
             {/* Resume Button */}
             <button
@@ -151,42 +147,9 @@ const Header = () => {
       {mobileMenuOpen && (
         <nav className="lg:hidden bg-white/95 backdrop-blur-xl border-t border-slate-100 animate-slide-up">
           <div className="flex flex-col items-center space-y-4 py-6">
-            <ScrollLink
-              activeClass="text-blue-600 font-bold"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={500}
-              to="Home-section"
-              onClick={toggleMobileMenu}
-              className="cursor-pointer text-slate-600 hover:text-blue-600 transition-all duration-300 font-medium text-lg"
-            >
-              Home
-            </ScrollLink>
-            <ScrollLink
-              activeClass="text-blue-600 font-bold"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={500}
-              to="About-section"
-              onClick={toggleMobileMenu}
-              className="cursor-pointer text-slate-600 hover:text-blue-600 transition-all duration-300 font-medium text-lg"
-            >
-              About
-            </ScrollLink>
-            <ScrollLink
-              activeClass="text-blue-600 font-bold"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={500}
-              to="Experience-section"
-              onClick={toggleMobileMenu}
-              className="cursor-pointer text-slate-600 hover:text-blue-600 transition-all duration-300 font-medium text-lg"
-            >
-              Experience
-            </ScrollLink>
+            {renderScrollLink("Home-section", "Home", true)}
+            {renderScrollLink("About-section", "About", true)}
+            {renderScrollLink("Experience-section", "Experience", true)}
             <Link
               to="/projectlist"
               onClick={toggleMobileMenu}
@@ -194,6 +157,7 @@ const Header = () => {
             >
               Projects
             </Link>
+            {renderScrollLink("Recommendations-section", "Recommendations", true)}
             <Link
               to="/links"
               onClick={toggleMobileMenu}
@@ -201,18 +165,7 @@ const Header = () => {
             >
               Links
             </Link>
-            <ScrollLink
-              activeClass="text-blue-600 font-bold"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={500}
-              to="Contact-section"
-              onClick={toggleMobileMenu}
-              className="cursor-pointer text-slate-600 hover:text-blue-600 transition-all duration-300 font-medium text-lg"
-            >
-              Contact
-            </ScrollLink>
+            {renderScrollLink("Contact-section", "Contact", true)}
             <button
               onClick={() => window.open(resumeUrl)}
               className="px-6 py-2.5 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold hover:shadow-lg transition-all duration-300"
