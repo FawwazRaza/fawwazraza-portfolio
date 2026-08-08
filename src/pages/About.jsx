@@ -1,7 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { UserData } from "../data/UserData";
 import SkillsSection from "../components/SkillsSection";
-import ExperienceTimeline from "../components/ExperienceTimeline";
+import CertificationsPreview from "../components/CertificationsPreview";
 import LinkCards from "../components/LinkCards";
 import MediumBlogs from "../components/MediumBlogs";
 import LinkedInPosts from "../components/LinkedInPosts";
@@ -29,26 +30,10 @@ function About() {
               About Me
             </h2>
 
-            <div className="font-poppins text-sm lg:text-base text-slate-700 leading-relaxed space-y-5 max-w-3xl mx-auto">
-              <p>
-                I am a Software Engineer and a fresh graduate from FAST NUCES with hands-on experience building backend systems, AI-powered applications, and scalable APIs using Python, Django, FastAPI, and PostgreSQL.
-              </p>
-
-              <p>
-                During my internships and projects, I worked on real-world systems involving LLMs, RAG pipelines, semantic search, voice AI, and enterprise automation. I enjoy understanding the logic behind a system whether it is optimizing a database query, improving API performance, or designing scalable backend architectures that are clean and maintainable.
-              </p>
-
-              <p>
-                I am particularly interested in algorithms, optimization, and system efficiency. I enjoy solving engineering problems by finding ways to make systems faster, lighter, and more reliable. One of the areas I enjoyed most was working on voice AI pipelines and optimizing models for low-latency real-time performance.
-              </p>
-
-              <p>
-                I also value strong collaboration and clean engineering practices. Across different teams and projects, I worked closely with frontend, backend, AI, and DevOps engineers to build systems that integrate smoothly and scale effectively.
-              </p>
-
-              <p>
-                <span className="font-semibold text-slate-800">Goal:</span> To join a top-tier team where I can use my skills in algorithms and system design to build high-quality products.
-              </p>
+            <div className="font-poppins text-sm lg:text-base text-slate-700 leading-[1.75] space-y-5 max-w-3xl mx-auto">
+              {UserData.about.split('\n\n').map((paragraph, index) => (
+                <p key={index}>{paragraph}</p>
+              ))}
             </div>
           </motion.div>
         </div>
@@ -56,6 +41,9 @@ function About() {
 
       {/* Skills & Technologies */}
       <SkillsSection />
+
+      {/* Certifications Preview */}
+      <CertificationsPreview />
 
       {/* Links & Social Section */}
       <section className="relative w-full py-12 lg:py-16">
@@ -70,7 +58,7 @@ function About() {
             <h2 className="font-poppins text-2xl lg:text-3xl font-bold text-slate-800 mb-3">
               Links & Social
             </h2>
-            <p className="font-poppins text-sm lg:text-base text-slate-500">
+            <p className="font-poppins text-sm lg:text-base text-slate-600">
               Connect with me across platforms
             </p>
           </motion.div>
@@ -86,7 +74,7 @@ function About() {
               </h3>
               <LinkCards limit={3} />
               <div className="mt-4">
-                <a href="https://fawwazraza.github.io/fawwazraza-portfolio/#/links" className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur border border-slate-200 rounded-full text-sm font-semibold hover:shadow-md hover:scale-105 transition-all text-slate-700">
+                <a href="https://fawwazraza.github.io/fawwazraza-portfolio/#/links" className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur border border-slate-200 rounded-full text-sm font-semibold hover:shadow-md hover:scale-105 transition-all text-slate-700 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none">
                   View All
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/></svg>
                 </a>
@@ -103,7 +91,7 @@ function About() {
               </h3>
               <MediumBlogs limit={3} />
               <div className="mt-4">
-                <a href="https://medium.com/@fawwazraza2024" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur border border-slate-200 rounded-full text-sm font-semibold hover:shadow-md hover:scale-105 transition-all text-slate-700">
+                <a href="https://medium.com/@fawwazraza2024" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur border border-slate-200 rounded-full text-sm font-semibold hover:shadow-md hover:scale-105 transition-all text-slate-700 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none">
                   View All
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
                 </a>
@@ -120,7 +108,7 @@ function About() {
               </h3>
               <LinkedInPosts limit={3} />
               <div className="mt-4">
-                <a href="https://www.linkedin.com/in/fawwazraza" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur border border-slate-200 rounded-full text-sm font-semibold hover:shadow-md hover:scale-105 transition-all text-slate-700">
+                <a href="https://www.linkedin.com/in/fawwazraza" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur border border-slate-200 rounded-full text-sm font-semibold hover:shadow-md hover:scale-105 transition-all text-slate-700 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none">
                   View All
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
                 </a>
@@ -129,8 +117,6 @@ function About() {
           </div>
         </div>
       </section>
-
-      <ExperienceTimeline />
     </>
   );
 }

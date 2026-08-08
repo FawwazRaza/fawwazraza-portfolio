@@ -49,7 +49,7 @@ function ArchiveProjects() {
   };
 
   return (
-    <div className="relative min-h-screen w-full py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 via-blue-50/30 to-white">
+    <div className="relative min-h-screen w-full pt-24 pb-16 lg:pt-28 lg:pb-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 via-blue-50/30 to-white">
       {/* Floating background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20 z-0">
         <div className="absolute top-24 right-10 w-72 h-72 bg-blue-200 rounded-full filter blur-3xl animate-float-slow"></div>
@@ -57,30 +57,28 @@ function ArchiveProjects() {
       </div>
 
       {/* Back Button */}
-      <div
-        onClick={() => navigate(-1)}
-        className="relative z-10 max-w-7xl mx-auto mb-8 flex items-center gap-2 text-slate-600 hover:text-blue-600 cursor-pointer transition-colors duration-300"
-        tabIndex={0}
-        role="button"
-        aria-label="Back to Portfolio"
-        onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') navigate(-1); }}
-      >
-        <FaArrowLeft />
-        <span className="font-poppins font-medium">Back to Portfolio</span>
+      <div className="relative z-10 max-w-7xl mx-auto mb-8">
+        <button
+          onClick={() => navigate('/')}
+          className="group inline-flex items-center gap-2 px-5 py-2.5 bg-white/80 backdrop-blur border border-slate-200 rounded-full text-sm font-semibold text-slate-700 hover:text-blue-600 hover:border-blue-300 shadow-sm hover:shadow transition-all duration-300"
+        >
+          <FaArrowLeft className="group-hover:-translate-x-1 transition-transform" />
+          Back to Home
+        </button>
       </div>
 
-      {/* Page Title */}
-      <div className="relative z-10 max-w-7xl mx-auto mb-12">
-        <h1 className="font-poppins text-3xl lg:text-4xl font-bold text-center text-slate-900 mb-4">
-          Project Archive
+      {/* Header */}
+      <div className="relative z-10 max-w-7xl mx-auto text-center mb-12 lg:mb-16">
+        <h1 className="font-poppins text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-4 tracking-tight">
+          All Projects Archive
         </h1>
-        <p className="text-center text-slate-500 font-poppins">
-          A comprehensive collection of my work across various domains
+        <p className="font-poppins text-sm sm:text-base text-slate-600 max-w-2xl mx-auto">
+          Comprehensive catalog of all repositories, production applications, and open-source contributions
         </p>
       </div>
 
       {/* Projects Grid */}
-      <div className="relative z-10 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+      <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
         {AllProjects.map((project, index) => {
           const imageData = getProjectImage(project);
           const isExpanded = expandedCard === index;

@@ -1,8 +1,8 @@
 
 export const UserData = {
   name: "Fawwaz Raza",
-  about: "I am a Software Engineer and a fresh graduate from FAST NUCES with hands-on experience building backend systems, AI-powered applications, and scalable APIs using Python, Django, FastAPI, and PostgreSQL.\n\nDuring my internships and projects, I worked on real-world systems involving LLMs, RAG pipelines, semantic search, voice AI, and enterprise automation. I enjoy understanding the logic behind a system whether it is optimizing a database query, improving API performance, or designing scalable backend architectures that are clean and maintainable.\n\nI am particularly interested in algorithms, optimization, and system efficiency. I enjoy solving engineering problems by finding ways to make systems faster, lighter, and more reliable. One of the areas I enjoyed most was working on voice AI pipelines and optimizing models for low-latency real-time performance.\n\nI also value strong collaboration and clean engineering practices. Across different teams and projects, I worked closely with frontend, backend, AI, and DevOps engineers to build systems that integrate smoothly and scale effectively.",
-  resumeUrl: "https://drive.google.com/file/d/12kPL-D9y0mH7wpgwlGYNDUGmjjC5mRYu/view?usp=sharing",
+  about: "I am a Software Engineer and fresh Computer Science graduate from FAST NUCES with hands-on experience building backend systems, AI-powered applications, and scalable APIs using Python, Django, FastAPI, and PostgreSQL.\n\nWhat actually pulls me into a problem is the layer underneath the feature: why a query is slow, why a retrieval pipeline gives inconsistent answers, why a voice agent has 400ms of latency it should not have. Across internships and full-time work at Systems Limited and Artificizen, I have built RAG pipelines, voice AI systems, and enterprise automation tools, and the part I keep coming back to is optimization: making something already working run faster, lighter, and more reliably.\n\nI do not just implement what is asked. I try to understand why it is being asked, and that usually means going a layer deeper than the ticket. That is also the pattern the people I have worked with keep independently pointing out: my mentor, Dr. Wasim Ahmad Khan, put it as 'he does not just follow instructions, he thinks through the problem until he finds a good solution.' My manager at Systems Limited, Sufiyan Anwar, described the same thing from a different angle: quickly understanding complex requirements and taking ownership of the result, not just the task.\n\nI care about writing code that is clean enough for someone else to trust, systems that scale without becoming fragile, and collaboration that actually moves fast because the API contract was right the first time.\n\nCurrently open to Software Engineer, Backend Engineer, and AI/ML Engineer roles, ideally somewhere I can keep going deeper on algorithms, system design, and production-grade AI.",
+  resumeUrl: "https://drive.google.com/file/d/19G7Uqx_nY06HggIkb-SgT0jyS1ju6Ssc/view?usp=sharing",
   FooterLink: "www.linkedin.com/in/fawwazraza",
   socialMedia: [
     {
@@ -23,10 +23,10 @@ export const UserData = {
   ],
   typewriterOptions: {
     strings: [
+      "Full Stack AI/ML Engineer",
       "Software Engineer",
-      "AI & ML Engineer",
       "Backend Engineer",
-      "MERN Stack Developer",
+      "AI & ML Engineer",
     ],
     autoStart: true,
     loop: true,

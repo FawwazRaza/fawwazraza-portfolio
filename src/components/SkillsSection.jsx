@@ -79,7 +79,7 @@ function SkillsGrid({ title, items, iconSize = 'md' }) {
             <div className="p-1.5 rounded-lg bg-transparent border border-slate-200 group-hover:border-blue-300 transition-all duration-300">
               <SkillIcon name={item.name} icon={item.icon} size={iconSize} />
             </div>
-            <span className="font-poppins text-[9px] md:text-[10px] text-slate-500 group-hover:text-slate-700 text-center leading-tight max-w-[60px] transition-colors duration-200 truncate">
+            <span className="font-poppins text-[9px] md:text-[10px] text-slate-700 text-center leading-tight max-w-[60px] transition-colors duration-200">
               {item.name}
             </span>
           </motion.div>
@@ -121,7 +121,7 @@ function SkillsSection() {
           <h2 className="font-poppins text-3xl lg:text-4xl font-bold text-slate-800 mb-3">
             Skills & Technologies
           </h2>
-          <p className="font-poppins text-base lg:text-lg text-slate-500 max-w-2xl mx-auto">
+          <p className="font-poppins text-base lg:text-lg text-slate-600 max-w-2xl mx-auto">
             My technical arsenal for building production systems
           </p>
         </motion.div>
@@ -144,13 +144,13 @@ function SkillsSection() {
             <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent mb-1">
               {coreSkills.length}
             </div>
-            <div className="text-sm text-slate-500 font-medium">Core Skills</div>
+            <div className="text-sm text-slate-600 font-medium">Core Skills</div>
           </div>
           <div className="rounded-2xl bg-white/80 backdrop-blur border border-slate-100 shadow-sm p-5 text-center hover:shadow-md transition-shadow">
             <div className="text-3xl font-bold bg-gradient-to-r from-emerald-500 to-teal-500 bg-clip-text text-transparent mb-1">
               {toolsAndTech.length}
             </div>
-            <div className="text-sm text-slate-500 font-medium">Tools & Technologies</div>
+            <div className="text-sm text-slate-600 font-medium">Tools & Technologies</div>
           </div>
         </motion.div>
       </div>

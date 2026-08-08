@@ -115,9 +115,9 @@ function Home() {
               transition={{ delay: 0.4, duration: 0.6 }}
             >
               <p className="text-xl md:text-2xl font-semibold text-slate-700">
-                Software Engineer | AI & ML Engineer
+                Full Stack AI/ML Engineer | Software Engineer
               </p>
-              <p className="text-sm md:text-base text-slate-500 max-w-xl font-medium">
+              <p className="text-sm md:text-base text-slate-600 max-w-xl font-medium">
                 Building production-grade AI systems that scale.
               </p>
             </motion.div>

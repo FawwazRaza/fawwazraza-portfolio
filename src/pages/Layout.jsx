@@ -2,10 +2,11 @@ import React, { useEffect } from "react";
 import Header from "../components/Header";
 import Home from "./Home";
 import About from "./About";
+import ExperienceTimeline from "../components/ExperienceTimeline";
+import ProjectCards from "../components/ProjectCards";
+import Recommendations from "../components/Recommendations";
 import Contact from "./Contact";
 import Footer from "../components/Footer";
-import Project from "./Project";
-import Recommendations from "../components/Recommendations";
 import { Element, scroller } from "react-scroll";
 import { useLocation } from "react-router-dom";
 
@@ -21,7 +22,7 @@ function Layout() {
           duration: 500,
           delay: 50,
           smooth: "easeInOutQuart",
-          offset: -100
+          offset: -80,
         });
       }, 100);
 
@@ -29,34 +30,39 @@ function Layout() {
       window.history.replaceState({}, document.title);
     }
   }, [location]);
+
   return (
     <div className="relative min-h-screen transition-colors duration-500">
       {/* Fixed Header */}
       <Header />
-      
+
       {/* Main Content Sections */}
       <main className="relative">
         <Element name="Home-section">
           <Home />
         </Element>
-        
+
         <Element name="About-section">
           <About />
         </Element>
-        
-        <Element name="Project-section">
-          <Project />
+
+        <Element name="Experience-section" className="snap-beat">
+          <ExperienceTimeline />
         </Element>
 
-        <Element name="Recommendations-section">
+        <Element name="Project-section" className="snap-beat">
+          <ProjectCards />
+        </Element>
+
+        <Element name="Recommendations-section" className="snap-beat">
           <Recommendations />
         </Element>
-        
+
         <Element name="Contact-section">
           <Contact />
         </Element>
       </main>
-      
+
       {/* Footer */}
       <Footer />
     </div>

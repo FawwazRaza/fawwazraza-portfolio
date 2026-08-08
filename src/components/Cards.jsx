@@ -120,7 +120,7 @@ function Cards() {
 
               {/* Base Description */}
               <p className="font-poppins text-sm lg:text-base text-slate-700 mb-4 leading-relaxed">
-                {isExpanded && project.intro ? project.intro : project.description.substring(0, 120) + '...'}
+                {isExpanded && project.intro ? project.intro : project.description.substring(0, 200) + (project.description.length > 200 ? '...' : '')}
               </p>
 
               {/* Expanded Content - with max-height and scroll */}

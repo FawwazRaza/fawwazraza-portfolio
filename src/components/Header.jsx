@@ -73,24 +73,25 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 z-50 w-full transition-all duration-500 sm:px-4 lg:px-28 lg:pt-2
+      className={`fixed top-0 z-50 w-full transition-all duration-300
       ${isScrolling 
-        ? "sticky backdrop-blur-xl bg-white/80 shadow-sm border-b border-slate-100" 
-        : "bg-transparent"}`}
+        ? "sticky backdrop-blur-xl bg-white/90 shadow-sm border-b border-slate-100/80" 
+        : "bg-white/80 backdrop-blur-md border-b border-slate-100/50"}`}
     >
-      <div className="flex items-center justify-between px-4 py-3">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 py-2.5 sm:py-3">
         {/* Logo */}
         <ScrollLink
           to="Home-section"
           smooth={true}
           duration={500}
           offset={-100}
-          className="cursor-pointer hover:scale-105 transition-transform duration-300"
+          className="cursor-pointer hover:scale-105 transition-transform duration-300 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:outline-none rounded-lg"
+          aria-label="Back to top"
         >
           <img
-            className="h-[80px] w-[90px] bg-cover bg-no-repeat rounded-lg"
+            className="h-10 sm:h-12 w-auto object-contain rounded-md"
             src={logo}
-            alt="logo"
+            alt="Fawwaz Raza"
             loading="lazy"
             decoding="async"
           />
@@ -102,11 +103,12 @@ const Header = () => {
             {renderScrollLink("Home-section", "Home")}
             {renderScrollLink("About-section", "About")}
             {renderScrollLink("Experience-section", "Experience")}
+            {renderScrollLink("Project-section", "Projects")}
             <Link 
-              to="/projectlist" 
+              to="/certifications" 
               className="cursor-pointer text-slate-600 hover:text-blue-600 transition-all duration-300 font-medium"
             >
-              Projects
+              Certifications
             </Link>
             {renderScrollLink("Recommendations-section", "Recommendations")}
             <Link 
@@ -150,12 +152,13 @@ const Header = () => {
             {renderScrollLink("Home-section", "Home", true)}
             {renderScrollLink("About-section", "About", true)}
             {renderScrollLink("Experience-section", "Experience", true)}
+            {renderScrollLink("Project-section", "Projects", true)}
             <Link
-              to="/projectlist"
+              to="/certifications"
               onClick={toggleMobileMenu}
               className="cursor-pointer text-slate-600 hover:text-blue-600 transition-all duration-300 font-medium text-lg"
             >
-              Projects
+              Certifications
             </Link>
             {renderScrollLink("Recommendations-section", "Recommendations", true)}
             <Link

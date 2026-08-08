@@ -195,7 +195,7 @@ function SkillsSummary() {
                 </div>
 
                 {/* Skill Name */}
-                <span className="font-poppins text-xs font-medium text-slate-700 text-center opacity-80 group-hover:opacity-100 transition-opacity duration-300 max-w-[80px] leading-tight">
+                <span className="font-poppins text-xs font-medium text-slate-700 text-center group-hover:opacity-100 transition-opacity duration-300 max-w-[80px] leading-tight">
                   {skill}
                 </span>
               </div>

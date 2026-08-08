@@ -19,11 +19,51 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
+:root {
+  --header-height: 80px;
+}
+
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px;
+  scroll-padding-top: calc(var(--header-height) + 16px);
   background-color: #f8fafc;
   -webkit-overflow-scrolling: touch;
+  scroll-snap-type: y proximity;
+}
+
+/* Universal scroll offset for all section anchors */
+section[id],
+div[id$="-section"],
+[id$="-section"],
+.snap-beat {
+  scroll-margin-top: calc(var(--header-height) + 24px);
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --header-height: 72px;
+  }
+  section[id],
+  div[id$="-section"],
+  [id$="-section"],
+  .snap-beat {
+    scroll-margin-top: calc(var(--header-height) + 16px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+    scroll-snap-type: none !important;
+  }
+  section[id],
+  div[id$="-section"],
+  [id$="-section"],
+  .snap-beat {
+    scroll-snap-align: none !important;
+  }
 }
 
 * {
@@ -331,12 +371,67 @@ section {
 }
 
 /* ============================================
+   CARD HOVER LIFT
+   ============================================ */
+.card-hover-lift {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(31, 38, 135, 0.15);
+}
+
+/* ============================================
+   LIGHTBOX OVERLAY
+   ============================================ */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+}
+
+.lightbox-overlay img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+}
+
+/* ============================================
    FOCUS INDICATORS
    ============================================ */
 *:focus-visible {
   outline: 2px solid #3b82f6;
   outline-offset: 2px;
-  border-radius: 4px;
+  border-radius: 6px;
+}
+
+/* ============================================
+   FLUID TYPOGRAPHY & ULTRAWIDE ENHANCEMENTS
+   ============================================ */
+.fluid-hero-title {
+  font-size: clamp(2rem, 4.5vw + 1rem, 3.75rem);
+  line-height: 1.15;
+}
+
+.fluid-section-title {
+  font-size: clamp(1.75rem, 3vw + 0.5rem, 2.5rem);
+  line-height: 1.2;
+}
+
+@media (min-width: 1920px) {
+  body {
+    font-size: 17px;
+  }
 }
 
 /* ============================================
@@ -346,3 +441,4 @@ section {
   background: rgba(59, 130, 246, 0.3);
   color: #1e293b;
 }
+

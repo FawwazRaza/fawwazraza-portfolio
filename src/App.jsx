@@ -9,6 +9,7 @@ import LinksAndBlogs from "./pages/LinksAndBlogs";
 import ProjectDetail from "./pages/ProjectDetail";
 import ExperienceDetail from "./pages/ExperienceDetail";
 import NotFound from "./pages/NotFound";
+import Certifications from "./pages/Certifications";
 import BackButton from "./components/BackButton";
 import IntroOverlay from "./components/IntroOverlay";
 import "./App.css";
@@ -58,6 +59,7 @@ function AppContent({ load }) {
               <Route path="/projects/:slug" element={<ProjectDetail />} />
               <Route path="/experience/:id" element={<ExperienceDetail />} />
               <Route path="/links" element={<LinksAndBlogs />} />
+              <Route path="/certifications" element={<Certifications />} />
               <Route path="/*" element={<NotFound />} />
             </Routes>
           </div>
