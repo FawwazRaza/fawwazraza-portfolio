@@ -1,25 +1,58 @@
 [
   {
-    "id": "systems-limited",
+    "id": "systems-limited-fulltime",
+    "company": "Systems Limited",
+    "position": "Associate Consultant (AI)",
+    "location": "Lahore, Punjab, Pakistan",
+    "type": "Full-time",
+    "start_date": "2026-08",
+    "end_date": "Present",
+    "description": "Working in the AI team at Systems Limited, focused on enterprise AI solutions, customer complaint management, CRM integrations, and production deployment of scalable AI systems in secure, regulated environments.",
+    "responsibilities": [
+      "Worked on prompt engineering and AI response optimization to improve accuracy, safety, and usefulness across enterprise use cases",
+      "Handled client and customer satisfaction workflows including complaint management systems for issue tracking and resolution",
+      "Integrated AI solutions with CRM platforms to connect customer data and conversations across systems",
+      "Deployed AI solutions into production environments rather than limited local prototypes",
+      "Designed scalable architecture to support growing users, data, and workflows without performance degradation",
+      "Worked with Red Hat OpenShift AI to run and manage enterprise AI workloads in secure environments",
+      "Deployed open-source models such as Qwen and Gemma using vLLM on NVIDIA GPUs for scalable inference serving",
+      "Maintained controlled environments with strict security, governance, and access requirements for enterprise AI systems",
+      "Preferred open-source tooling and cost-efficient architecture wherever possible to keep solutions flexible and sustainable"
+    ],
+    "tech_stack": ["Python", "Prompt Engineering", "Azure AI", "OpenShift AI", "vLLM", "LLMs", "CRM Integration", "Enterprise AI", "NVIDIA GPUs"],
+    "links": [
+      {
+        "label": "LinkedIn",
+        "url": "https://lnkd.in/p/dUgDmsJv"
+      }
+    ]
+  },
+  {
+    "id": "systems-limited-intern",
     "company": "Systems Limited",
     "position": "AI Engineer",
     "location": "Lahore, Punjab, Pakistan",
     "type": "Internship",
     "start_date": "2026-04",
     "end_date": "2026-07",
-    "description": "Designed and developed AI-driven internal automation solutions for enterprise-scale operations across HR, IT, Cloud, DevOps, and 24/7 support functions using Azure AI services.",
+    "description": "Designed and deployed AI automation solutions for enterprise HR, IT, Cloud, and DevOps operations serving thousands of employees, with a strong emphasis on production-ready RAG systems and multi-agent workflows.",
     "responsibilities": [
-      "Developed AI automation pipelines for enterprise workflows using LLMs, RAG, and Azure AI services",
-      "Optimized prompt routing, token usage, and inference workflows to improve system efficiency and reduce costs",
-      "Integrated REST APIs, webhooks, and real-time data pipelines for AI-driven automation systems",
-      "Built monitoring and observability dashboards to track AI latency, accuracy, and production health",
-      "Researched and implemented advanced LLM techniques including RAG pipelines, chunking strategies, embeddings, and multi-agent workflows"
+      "Designed and deployed AI automation solutions for enterprise HR, IT, Cloud, and DevOps operations serving thousands of employees",
+      "Built production RAG pipelines using Azure OpenAI, Cosmos DB vector search, and Azure Blob Storage for internal knowledge bases",
+      "Developed multi-agent AI workflows to reduce manual effort across repetitive support and operational tasks",
+      "Automated document ingestion by integrating Power Automate with OneDrive, replacing manual blob storage updates",
+      "Solely designed and delivered EventOps, a full event management automation system on Microsoft 365 covering registration, validation, approvals, attendee onboarding, check-in, feedback, certificates, and reporting",
+      "Built 14 Power Automate flows and a normalized data model across 10 Excel workbooks to support end-to-end traceability and operational delivery",
+      "Added duplicate prevention mechanisms to avoid repeat emails and certificates using marker files in OneDrive",
+      "Created live dashboards with real-time KPIs for registrations, check-in rates, and feedback without Power BI or SharePoint",
+      "Delivered full project documentation including a 50+ page evaluation playbook, flow defense guide, and operational handover pack",
+      "Owned the complete delivery cycle from requirements gathering, data modeling, testing, and final demo to operational handover"
     ],
-    "tech_stack": ["Python", "Azure OpenAI", "Azure AI Services", "RAG", "LLMs", "REST APIs", "Power Automate", "Multi-Agent Systems"],
+    "tech_stack": ["Python", "Azure OpenAI", "Azure AI Services", "RAG", "LLMs", "Power Automate", "REST APIs", "Multi-Agent Systems", "Cosmos DB", "Azure Blob Storage"],
     "links": [
       {
         "label": "LinkedIn",
-        "url": "https://www.linkedin.com/in/fawwazraza"
+        "url": "https://lnkd.in/p/d8FzWSZK"
       }
     ]
   },
